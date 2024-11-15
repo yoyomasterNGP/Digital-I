@@ -16,10 +16,10 @@ Vamos a analizar los valores $V_{IH}, V_{IL}$; para ello variamos la señal de e
 ### Características AC
 
 Vamos a analizar los tiempos de retardo $(t_{PLH}, t_{PHL})$ y tiempos de almacenamiento $(t_{THL}, t_{TLH})$, para ello la entrada será una señal cuadrada de 1kHz con un tiempo de subida y de bajado de 20 ns, y la salida nuevamente será una carga de $10k\Omega$.
-![AC TTL](IMAGENES/AC_A_TTL.JPG "Tiempo de retardo TTL HL")
-![AC TTL](IMAGENES/AC_A_TTL.JPG "Tiempo de retardo TTL LH")
-![AC TTL](IMAGENES/AC_A_TTL.JPG "Tiempo de almacenamiento TTL HL")
-![AC TTL](IMAGENES/AC_A_TTL.JPG "Tiempo de almacenamiento TTL LH")
+![AC TTL](IMAGENES/AC_R_HL_TTL.JPG "Tiempo de retardo TTL HL")
+![AC TTL](IMAGENES/AC_R_LH_TTL.JPG "Tiempo de retardo TTL LH")
+![AC TTL](IMAGENES/AC_A_HL_TTL.JPG "Tiempo de almacenamiento TTL HL")
+![AC TTL](IMAGENES/AC_A_HL_TTL.JPG "Tiempo de almacenamiento TTL LH")
 
 
 ### Fan - Out
