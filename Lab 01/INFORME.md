@@ -25,6 +25,9 @@ Los **TTL (Transistor-Transistor Logic):** se usan en sistemas de alta velocidad
 
 ![TTL](IMAGENES/74LS04.jpg "Hoja de especificaciones")
 
+Además, el circuito equivalente dado en este dispositivo es:
+
+
 ## Negador CMOS CD4069
 Los **CMOS (Complementary Metal-Oxide-Semiconductor):** Ideal para dispositivos de bajo consumo, como celulares y sensores portátiles. Su hoja de especificaciones es:
 
