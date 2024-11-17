@@ -139,4 +139,7 @@ Obtenemos un Fan - Out de $98.8\mu A$
 # Resultados Experimentales 
 ## Negador CMOS CD4069
 ![ALmacenamiento CMOS](IMAGENES/Almacenamiento_CMOS.jpeg "Tiempo de almacenamiento CMOS")
+![Delay CMOS](IMAGENES/Delay_CMOS.jpeg "Tiempo de Delay CMOS")
 ## Negador TTL 74LS04
+![ALmacenamiento TTL](IMAGENES/Almacenamiento_TTL.jpeg "Tiempo de almacenamiento TTL")
+![Delay TTL](IMAGENES/Delay_TTL.jpeg "Tiempo de Delay TTL")
