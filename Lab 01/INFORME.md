@@ -1,8 +1,38 @@
 # COMPARACIÓN DE TECNOLOGÍA CMOS y TTL
+| Electrónica Digital I | Grupo 4 | Equipo 3 |
+|------------------------|---------|----------|
+
 - Nicolás Garzón Peña
-- 2
-- 3
+- José Alejandro López Vargas
+- Johan Stiven Tovar López
 ___
+
+En la electrónica digital, las tecnologías TTL y CMOS destacan por sus características y aplicaciones. Este informe se enfoca en comparar estos negadores mediante el análisis de parámetros clave, como tiempos de respuesta, niveles de tensión y disipación de potencia, utilizando, en primer lugar, los valores nominales proporcionados en los datasheets, luego simulaciones en Qucs y finalmente comparando estos datos con las mediciones experimentales.
+
+# Especificaciones técnicas
+
+En esencia, los dos **negadores** a utilizar son puertas lógicas que invierten el valor de su entrada: si recibe un `1`, entrega un `0`, y viceversa. Es un pilar para formar otras compuertas lógicas.  
+
+ | Entrada (A) | Salida (¬A) |
+|-------------|-------------|
+| 0           | 1           |
+| 1           | 0           |
+
+Sin embargo, estas salidas y entradas están situadas dentro de intervalos de voltaje especificos en cada tecnología, cómo se vera posteriormente.
+
+## Negador TTL 74LS04
+Los **TTL (Transistor-Transistor Logic):** se usan en sistemas de alta velocidad, como computadoras y controladores industriales. Su hoja de especificaciones es:
+
+
+
+
+## Negador CMOS CD4069
+Los **CMOS (Complementary Metal-Oxide-Semiconductor):** Ideal para dispositivos de bajo consumo, como celulares y sensores portátiles. Su hoja de especificaciones es:
+
+
+
+
+
 # Cálculos y simulaciones
 ## Negador TTL 74LS04
 
