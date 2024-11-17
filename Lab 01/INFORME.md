@@ -23,11 +23,12 @@ Sin embargo, estas salidas y entradas están situadas dentro de intervalos de vo
 ## Negador TTL 74LS04
 Los **TTL (Transistor-Transistor Logic):** se usan en sistemas de alta velocidad, como computadoras y controladores industriales. Su hoja de especificaciones es:
 
-
-
+![TTL](IMAGENES/74LS04.jpg "Hoja de especificaciones")
 
 ## Negador CMOS CD4069
 Los **CMOS (Complementary Metal-Oxide-Semiconductor):** Ideal para dispositivos de bajo consumo, como celulares y sensores portátiles. Su hoja de especificaciones es:
+
+![TTL](IMAGENES/AC cmos.jpg "Hoja de especificaciones AC")
 
 
 
