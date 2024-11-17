@@ -40,6 +40,10 @@ Además, el circuito equivalente dado en los datasheets del dispositivo es:
 
 ![CMOS circuit](IMAGENES/circuit_diagram_cmos.jpg "Circuito equivalente CD4069")
 
+Como podemos observar, existen diferencias notables entre estos dos dispositivos. La más evidente es la complejidad de sus circuitos equivalentes. La tecnología TTL utiliza una variedad de transistores BJT (transistor bipolar de unión), y en la variante TTL Schottky, se incorporan diodos Schottky para mejorar la velocidad de conmutación. Por otro lado, la tecnología CMOS es mucho más sencilla, utilizando únicamente dos transistores, uno NMOS y otro PMOS.
+
+Estas diferencias en la topología de los circuitos tienen repercusiones que se evidencian en las tablas mostradas. Por ejemplo, los tiempos de conmutación (tPLH y tPHL) son generalmente más rápidos en la tecnología TTL debido a los transistores Schottky. Además, los niveles de voltaje manejados en la tecnología TTL son más altos, ya que es necesario alimentar una mayor variedad de componentes. En cambio, la tecnología CMOS, al ser más sencilla, consume mucho menos energía.
+
 # Cálculos y simulaciones
 ## Negador TTL 74LS04
 
