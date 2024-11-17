@@ -132,4 +132,6 @@ Obtenemos un Fan - Out de $98.8\mu A$
 
 ## Oscilador en anillo
 
-![AC TTL](IMAGENES/AO.JPG "Tiempo de almacenamiento TTL LH")
+![AC TTL](IMAGENES/AO_3.JPG "Tiempo de almacenamiento TTL LH")
+
+![AC TTL](IMAGENES/AO_5.JPG "Tiempo de almacenamiento TTL LH")
