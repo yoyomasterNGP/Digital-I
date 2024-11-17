@@ -137,3 +137,6 @@ Obtenemos un Fan - Out de $98.8\mu A$
 ![AC TTL](IMAGENES/AO_5.JPG "Tiempo de almacenamiento TTL LH")
 
 # Resultados Experimentales 
+## Negador CMOS CD4069
+
+## Negador TTL 74LS04
