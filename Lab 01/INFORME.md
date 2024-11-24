@@ -150,6 +150,18 @@ $TPLH = 64.00ns$
 
 $TPHL = 32.00ns$
 
+### Características de voltaje
+
+ | Parámetro | Valor nominal (Datasheet) | Valor experimental | Error porcentual
+|-------------|-------------|-----------|------------|--------
+| $V_{ol} $           | 1           |
+| 1           | 0           |
+
+Las fotos de las mediciones se encuentran en: %%%liiink docs
+
+
+
+
 
 ## Negador TTL 74LS04
 
