@@ -152,12 +152,15 @@ $TPHL = 32.00ns$
 
 ### Características de voltaje
 
- | Parámetro | Valor nominal (Datasheet) | Valor experimental | Error porcentual
-|-------------|-------------|-----------|------------|--------
-| $V_{ol} $           | 1           |
-| 1           | 0           |
+ | Parámetro | Valor nominal (Datasheet) | Valor experimental | Error porcentual |
+|-------------|-------------|-----------|-------------|
+| $V_{IL} $   |      1.0    |     1.409  |    40.9         |
+| $V_{IH}$    |       4.0   |      4.059 |   1.475         |
+| $V_{OL}$    |       0.05  |     0.004  |        92       | 
+| $V_{OH}$    |      4.95   |   4.801    |     3.01        | 
 
-Las fotos de las mediciones se encuentran en: %%%liiink docs
+Las fotos de las mediciones se encuentran en: [Anexos de Mediciones](https://docs.google.com/document/d/1huVV0JdHspE3xCMzzdIQ4rvsg7iDnN15pNWeRtljhYE/edit?tab=t.0)
+
 
 
 
@@ -174,6 +177,18 @@ $TPLH = 26.00ns$
 ### Tiempo de Delay
 ![Delay TTL](IMAGENES/Delay_TTL.jpeg "Tiempo de Delay TTL")
 $TPHL = 22.00ns$
+
+### Características de voltaje
+
+ | Parámetro | Valor nominal (Datasheet) | Valor experimental | Error porcentual (%) |
+|-------------|-------------|-----------|-------------|
+| $V_{IL} $   | 0.8           |     2.199      |      174.875     |
+| $V_{IH}$    | 2.0           |   2.899        |   44.95          |
+| $V_{OL}$    |      0.25     |   0.039        |      84.4        |
+| $V_{OH}$    |       3.5     |    4.946       |    41.314        | 
+
+
+
 
 ## Oscilador en Anillo CMOS
 
