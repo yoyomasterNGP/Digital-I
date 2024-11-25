@@ -174,3 +174,9 @@ $TPLH = 26.00ns$
 ### Tiempo de Delay
 ![Delay TTL](IMAGENES/Delay_TTL.jpeg "Tiempo de Delay TTL")
 $TPHL = 22.00ns$
+
+## Oscilador en Anillo CMOS
+
+### Oscilador de 2 compuertas lógicas
+
+
