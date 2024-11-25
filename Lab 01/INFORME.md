@@ -159,7 +159,7 @@ $TPHL = 32.00ns$
 | $V_{OL}$    |       0.05  |     0.004  |        92       | 
 | $V_{OH}$    |      4.95   |   4.801    |     3.01        | 
 
-Las fotos de las mediciones se encuentran en: [Anexos de Mediciones](https://docs.google.com/document/d/1huVV0JdHspE3xCMzzdIQ4rvsg7iDnN15pNWeRtljhYE/edit?tab=t.0)
+
 
 
 
@@ -187,7 +187,7 @@ $TPHL = 22.00ns$
 | $V_{OL}$    |      0.25     |   0.039        |      84.4        |
 | $V_{OH}$    |       3.5     |    4.946       |    41.314        | 
 
-
+Las fotos de las mediciones para CMOS y TTL se encuentran en: [Anexos de Mediciones](https://docs.google.com/document/d/1huVV0JdHspE3xCMzzdIQ4rvsg7iDnN15pNWeRtljhYE/edit?tab=t.0)
 
 
 ## Oscilador en Anillo CMOS
