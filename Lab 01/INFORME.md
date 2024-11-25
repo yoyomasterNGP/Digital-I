@@ -179,4 +179,33 @@ $TPHL = 22.00ns$
 
 ### Oscilador de 2 compuertas lógicas
 
+Circuito utilizado:
+
 ![Oscilador de 2 compuertas](IMAGENES/Osc_2_cl.jpg "Oscilador de 2 compuertas")
+
+Salida Negador 1 vs Entrada Inicial:
+
+![Oscilador de 2 compuertas](IMAGENES/Salida_PrimerNegador.jpg "Oscilador de 2 compuertas primera salida")
+
+Salida Negador 2 vs Entrada Inicial:
+
+![Oscilador de 2 compuertas](IMAGENES/Salida_negador2_2cl.jpg "Oscilador de 2 compuertas segunda salida")
+
+### Oscilador de 3 compuertas lógicas 
+
+Circuito utilizado:
+
+![Oscilador de 3 compuertas](IMAGENES/Osc_3cl.jpg "Oscilador de 3 compuertas")
+
+Salida Negador 1 vs Entrada Inicial:
+
+![Oscilador de 3 compuertas](IMAGENES/Inicial_negador_3cl.jpg "Oscilador de 3 compuertas primera salida")
+
+Salida Negador 2 vs Entrada Inicial:
+
+![Oscilador de 3 compuertas](IMAGENES/Segundo_negador_3cl.jpg "Oscilador de 3 compuertas segunda salida")
+
+Salida Final:
+
+![Oscilador de 3 compuertas](IMAGENES/Salida_Final_3cl.jpg "Oscilador de 3 compuertas salida final")
+
