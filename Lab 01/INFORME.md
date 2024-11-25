@@ -179,4 +179,4 @@ $TPHL = 22.00ns$
 
 ### Oscilador de 2 compuertas lógicas
 
-
+![Oscilador de 2 compuertas](IMAGENES/Osc_2_cl.jpg "Oscilador de 2 compuertas")
