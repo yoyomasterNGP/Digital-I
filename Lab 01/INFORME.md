@@ -144,14 +144,18 @@ Obtenemos un Fan - Out de $98.8\mu A$
 
 $TPLH = 64.00ns$
 
-
 ### Tiempo de Delay
 ![Delay CMOS](IMAGENES/Delay_CMOS.jpeg "Tiempo de Delay CMOS")
 
 $TPHL = 32.00ns$
 
-### Características de voltaje
+### Fan-in 
 
+### Fan-out
+
+### Potencia disipada
+
+### Características de voltaje
 
  | Parámetro | Valor nominal (Datasheet) | Valor Simulado           | Valor experimental  | Error porcentual (%) |
 |-------------|-------------             |       -----------        |       -----------   |-------------         |
@@ -162,7 +166,7 @@ $TPHL = 32.00ns$
 
 Las fotos de las mediciones para CMOS y TTL se encuentran en: [Anexos de Mediciones](https://docs.google.com/document/d/1huVV0JdHspE3xCMzzdIQ4rvsg7iDnN15pNWeRtljhYE/edit?tab=t.0)
 
-### $T_{PLH} $ y $T_{PHl} $  encontrados 
+### $T_{PLH}$ y $T_{PHl}$  encontrados 
 
  | Parámetro (ns)  | Valor nominal (Datasheet) | Valor Simulado | Valor experimental | Error porcentual (%) |
 |-------------|-------------                  |   ------------- |      -----------   |-------------         |
@@ -185,6 +189,11 @@ $TPHL = 22.00ns$
 
 ![Función de transferencia](IMAGENES/Tranfer.jpg "Función de transferencia $V_{in}$ vs $V_{out}$")
 
+### Fan-in 
+
+### Fan-out
+
+### Potencia disipada
 
 ### Características de voltaje
 
@@ -195,7 +204,7 @@ $TPHL = 22.00ns$
 | $V_{OL}$    |      0.25                 |         0       | 0.039              |      84.4         |
 | $V_{OH}$    |       3.5                 |       3.34         |    4.946           |    41.314         |  
 
-### $T_{PLH} $ y $T_{PHl} $  encontrados 
+### $T_{PLH}$ y $T_{PHl}$  encontrados 
 
  | Parámetro (ns)  | Valor nominal (Datasheet) | Valor Simulado | Valor experimental | Error porcentual (%) |
 |-------------|-------------                  |   ------------- |      -----------   |-------------         |
@@ -214,11 +223,11 @@ Circuito utilizado:
 
 ![Oscilador de 2 compuertas](IMAGENES/Osc_2_cl.jpg "Oscilador de 2 compuertas")
 
-Salida Negador 1 vs Entrada Inicial:
+Salida Negador 1 vs Entrada Inicial: En primer lugar, es posible observar en la siguiente imagén la comparación de la entrada inicial vs la salida del primer negador.
 
 ![Oscilador de 2 compuertas](IMAGENES/Salida_PrimerNegador.jpg "Oscilador de 2 compuertas primera salida")
 
-Salida Negador 2 vs Entrada Inicial:
+Salida Negador 2 vs Entrada Inicial: En la siguiente imagén vemos la entrada inicial comparada con la salida del segundo negador. Al compararlas se observa una pequeña bajada en el nivel de tensión, lo cual, ocurre porque los inversores tienen una resistencia interna que afecta los niveles de salida, además de que las capacitancias parasitarias ralentizan las transiciones. También puede ocurrir porque durante los cambios de estado de la señal cuadrada, hay un breve momento en que ambos transistores internos conducen, lo que genera pequeñas pérdidas. 
 
 ![Oscilador de 2 compuertas](IMAGENES/Salida_negador2_2cl.jpg "Oscilador de 2 compuertas segunda salida")
 
@@ -240,3 +249,4 @@ Salida Final:
 
 ![Oscilador de 3 compuertas](IMAGENES/Salida_Final_3cl.jpg "Oscilador de 3 compuertas salida final")
 
+En este caso, con el oscilador en anillo con tres negadores, vemos que, en la salida final, la del tercer negador, hay una pequeña caída de voltaje (alrededor de $0.2V$). Constrastando con las simulaciones realizadas se evidencia 
