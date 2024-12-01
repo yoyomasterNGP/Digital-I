@@ -162,6 +162,12 @@ $TPHL = 32.00ns$
 
 Las fotos de las mediciones para CMOS y TTL se encuentran en: [Anexos de Mediciones](https://docs.google.com/document/d/1huVV0JdHspE3xCMzzdIQ4rvsg7iDnN15pNWeRtljhYE/edit?tab=t.0)
 
+### $T_{PLH} $ y $T_{PHl} $  encontrados 
+
+ | Parámetro (ns)  | Valor nominal (Datasheet) | Valor Simulado | Valor experimental | Error porcentual (%) |
+|-------------|-------------                  |   ------------- |      -----------   |-------------         |
+| $T_{PLH} $   | 50.0 - 90.0                  |      138.0      |    64.0            |      73.33      |
+| $T_{PHl} $    | 50.0 - 90.0                 |       138.0     |   32.0            |   46.66          |
 
 ## Negador TTL 74LS04
 
@@ -188,6 +194,14 @@ $TPHL = 22.00ns$
 | $V_{IH}$    | 2.0                       |         2.5       |   2.899            |   44.95           |
 | $V_{OL}$    |      0.25                 |         0       | 0.039              |      84.4         |
 | $V_{OH}$    |       3.5                 |       3.34         |    4.946           |    41.314         |  
+
+### $T_{PLH} $ y $T_{PHl} $  encontrados 
+
+ | Parámetro (ns)  | Valor nominal (Datasheet) | Valor Simulado | Valor experimental | Error porcentual (%) |
+|-------------|-------------                  |   ------------- |      -----------   |-------------         |
+| $T_{PLH} $   | 9.0 - 15.0                    |      8.0       |  26.0             |      73.33      |
+| $T_{PHl} $    | 10.0 - 15.0                  |      8.0       |   22.0            |   46.66          |
+
 
 Las fotos de las mediciones para CMOS y TTL se encuentran en: [Anexos de Mediciones](https://docs.google.com/document/d/1huVV0JdHspE3xCMzzdIQ4rvsg7iDnN15pNWeRtljhYE/edit?tab=t.0)
 
