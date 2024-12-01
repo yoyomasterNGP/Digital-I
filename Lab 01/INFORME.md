@@ -160,6 +160,7 @@ $TPHL = 32.00ns$
 | $V_{OH}$    |      4.95                |        4.72                  |  4.801             |     3.01        | 
 
 
+Las fotos de las mediciones para CMOS y TTL se encuentran en: [Anexos de Mediciones](https://docs.google.com/document/d/1huVV0JdHspE3xCMzzdIQ4rvsg7iDnN15pNWeRtljhYE/edit?tab=t.0)
 
 
 
