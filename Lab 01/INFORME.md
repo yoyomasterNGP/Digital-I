@@ -149,9 +149,13 @@ $TPLH = 64.00ns$
 
 $TPHL = 32.00ns$
 
-### Fan-in 
+### Fan-out ttl cambiar
 
-Para obtener el Fan-in, se colocó un potenciometro a la entrada de
+Para obtener el Fan-out, como se explicó previamente en las simulaciones, se colocó un potenciometro como la carga del circuito. Cuando la tensión fue $V_{OH}$ el Fan - Out corresponde a la corriente de salida.
+
+
+
+
 
 ### Características de voltaje
 
