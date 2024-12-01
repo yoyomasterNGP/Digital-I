@@ -152,14 +152,12 @@ $TPHL = 32.00ns$
 
 ### Características de voltaje
 
- | Parámetro | Valor nominal (Datasheet) | Valor experimental | Error porcentual |
-|-------------|-------------|-----------|-------------|
-| $V_{IL} $   |      1.0    |     1.409  |    40.9         |
-| $V_{IH}$    |       4.0   |      4.059 |   1.475         |
-| $V_{OL}$    |       0.05  |     0.004  |        92       | 
-| $V_{OH}$    |      4.95   |   4.801    |     3.01        | 
-
-
+ | Parámetro | Valor nominal (Datasheet) | Valor Simulado           | Valor experimental | Error porcentual (%)|
+|-------------|-------------             |       -----------        |       -----------|-------------       |
+| $V_{IL} $   |      1.0                 |            2.5              | 1.409            |    40.9            |
+| $V_{IH}$    |       4.0                |            2.5              |   4.059          |   1.475            |
+| $V_{OL}$    |       0.05               |            0              |  0.004          |        92          | 
+| $V_{OH}$    |      4.95                |        4.72                  |  4.801             |     3.01        | 
 
 
 
@@ -185,7 +183,8 @@ $TPHL = 22.00ns$
 | $V_{IL} $   | 0.8                       |       2.5         |  2.199             |      174.875      |
 | $V_{IH}$    | 2.0                       |         2.5       |   2.899            |   44.95           |
 | $V_{OL}$    |      0.25                 |         0       | 0.039              |      84.4         |
-| $V_{OH}$    |       3.5                 |       4.72         |    4.946           |    41.314         |  
+| $V_{OH}$    |       3.5                 |       3.34         |    4.946           |    41.314         |  
+
 Las fotos de las mediciones para CMOS y TTL se encuentran en: [Anexos de Mediciones](https://docs.google.com/document/d/1huVV0JdHspE3xCMzzdIQ4rvsg7iDnN15pNWeRtljhYE/edit?tab=t.0)
 
 
