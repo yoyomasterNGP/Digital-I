@@ -29,6 +29,13 @@ Además, el circuito equivalente dado en los datasheets del dispositivo es:
 
 ![TTL Circuit](IMAGENES/circuit_diagram_ttl.jpg "Circuito equivalente 74LS04")
 
+### Potencia
+
+En los datasheets encontrados se menciona que la disipación de potencia, por compuerta lógica del TTL, se encuentra aproximadamente en $2mW$, cuando la frecuencia es de $100kHz$. Aunque esta frecuencia en específico no sea la que se trabajará en este caso, es un punto de referencia.
+
+![TTL Pot](IMAGENES/POtenciaTTl.png "Potencia disipada 74LS04")
+
+
 ## Negador CMOS CD4069
 Los **CMOS (Complementary Metal-Oxide-Semiconductor):** Ideal para dispositivos de bajo consumo, como celulares y sensores portátiles. Su hoja de especificaciones es:
 
@@ -39,6 +46,12 @@ Los **CMOS (Complementary Metal-Oxide-Semiconductor):** Ideal para dispositivos 
 Además, el circuito equivalente dado en los datasheets del dispositivo es:
 
 ![CMOS circuit](IMAGENES/circuit_diagram_cmos.jpg "Circuito equivalente CD4069")
+
+### Potencia
+
+![CMOS Pot](IMAGENES/POtenciaCD.png "Potencia disipada CD4069")
+
+### Comparación entre los negadores
 
 Como podemos observar, existen diferencias notables entre estos dos dispositivos. La más evidente es la complejidad de sus circuitos equivalentes. La tecnología TTL utiliza una variedad de transistores BJT (transistor bipolar de unión), y en la variante TTL Schottky, se incorporan diodos Schottky para mejorar la velocidad de conmutación. Por otro lado, la tecnología CMOS es mucho más sencilla, utilizando únicamente dos transistores, uno NMOS y otro PMOS.
 
