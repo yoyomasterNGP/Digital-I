@@ -275,3 +275,11 @@ Salida Final:
 ![Oscilador de 3 compuertas](IMAGENES/Salida_Final_3cl.jpg "Oscilador de 3 compuertas salida final")
 
 En este caso, con el oscilador en anillo con tres negadores, vemos que, en la salida final, la del tercer negador, hay una pequeña caída de voltaje (alrededor de $0.2V$). 
+
+## Conclusión
+
+Este informe comparó las tecnologías de compuertas lógicas TTL y CMOS, evaluando parámetros como tiempos de conmutación, características de voltaje. Se observó que el TTL 74LS04 presenta tiempos de conmutación más rápidos en comparación con el CMOS CD4069, lo que se debe a su diseño basado en transistores BJT y diodos Schottky. Por otro lado, el CMOS es más sencillo y tiene tiempos de retardo más largos, pero es más eficiente en cuanto a consumo energético, lo que lo hace adecuado para aplicaciones donde la eficiencia es importante. 
+
+En cuanto a las características de voltaje, las mediciones experimentales mostraron que las compuertas CMOS tienen una mayor fiabilidad, al menos con el método utilizado. En la medición de los niveles de voltaje, los valores obtenidos fueron más consistentes con los valores nominales especificados en los datasheets, especialmente en los niveles de salida $V_{OH}$ y $V_{OL}$. Esto muestra una mayor estabilidad en las señales generadas por las compuertas CMOS, lo que es ventajoso en situaciones donde se requiere precisión en los niveles de voltaje de salida.
+
+Asimismo, en los osciladores en anillo, donde se utilizaron negadores CMOS, se evidenció una pequeña caída en el nivel de voltaje en las salidas, atribuida a las resistencias internas y capacitancias parasitarias, lo cual afecta ligeramente la calidad de la señal. En resumen, estas diferencias nos muestran que hay que tener en cuenta todos los factores al diseñar circuitos digitales, ya que las tecnologías cambian y pueden variar en algunos aspectos.
