@@ -152,17 +152,15 @@ $TPHL = 32.00ns$
 
 ### Características de voltaje
 
- | Parámetro | Valor nominal (Datasheet) | Valor Simulado           | Valor experimental | Error porcentual (%)|
-|-------------|-------------             |       -----------        |       -----------|-------------       |
-| $V_{IL} $   |      1.0                 |            2.5              | 1.409            |    40.9            |
-| $V_{IH}$    |       4.0                |            2.5              |   4.059          |   1.475            |
-| $V_{OL}$    |       0.05               |            0              |  0.004          |        92          | 
-| $V_{OH}$    |      4.95                |        4.72                  |  4.801             |     3.01        | 
 
+ | Parámetro | Valor nominal (Datasheet) | Valor Simulado           | Valor experimental  | Error porcentual (%) |
+|-------------|-------------             |       -----------        |       -----------   |-------------         |
+| $V_{IL} $   |      1.0                 |            2.5           | 1.409               |    40.9              |
+| $V_{IH}$    |       4.0                |            2.5           |   4.059             |   1.475              |
+| $V_{OL}$    |       0.05               |            0             |  0.004              |        92            | 
+| $V_{OH}$    |      4.95                |        4.72              |  4.801              |     3.01             | 
 
 Las fotos de las mediciones para CMOS y TTL se encuentran en: [Anexos de Mediciones](https://docs.google.com/document/d/1huVV0JdHspE3xCMzzdIQ4rvsg7iDnN15pNWeRtljhYE/edit?tab=t.0)
-
-
 
 
 ## Negador TTL 74LS04
@@ -176,6 +174,11 @@ $TPLH = 26.00ns$
 ### Tiempo de Delay
 ![Delay TTL](IMAGENES/Delay_TTL.jpeg "Tiempo de Delay TTL")
 $TPHL = 22.00ns$
+
+### $V_{in}$ vs $V_{out}$
+
+![Función de transferencia](IMAGENES/Tranfer.jpg "Función de transferencia $V_{in}$ vs $V_{out}$")
+
 
 ### Características de voltaje
 
