@@ -151,9 +151,7 @@ $TPHL = 32.00ns$
 
 ### Fan-in 
 
-### Fan-out
-
-### Potencia disipada
+Para obtener el Fan-in, se colocó un potenciometro a la entrada de
 
 ### Características de voltaje
 
@@ -191,9 +189,6 @@ $TPHL = 22.00ns$
 
 ### Fan-in 
 
-### Fan-out
-
-### Potencia disipada
 
 ### Características de voltaje
 
