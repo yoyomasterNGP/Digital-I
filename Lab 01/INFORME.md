@@ -149,13 +149,17 @@ $TPLH = 64.00ns$
 
 $TPHL = 32.00ns$
 
-### Fan-out ttl cambiar
+### Fan-out
 
 Para obtener el Fan-out, como se explicó previamente en las simulaciones, se colocó un potenciometro como la carga del circuito. Cuando la tensión fue $V_{OH}$ el Fan - Out corresponde a la corriente de salida.
 
-![ttl](IMAGENES/Vfanoutttl.png "V fan out ttl")
+![cmos](IMAGENES/Vfanoutcmos.png "V fan out cmos")
 
+![cmos](IMAGENES/Rfanoutcmos.png "R fan out cmos")
 
+Donde la resitencia fue de $4.278k\Omega$, por lo que la corriente correspondiente al Fan-out es de:
+
+$$I=\frac{4.598V}{4.278k\Omega}=1.0748mA $$
 
 
 ### Características de voltaje
@@ -192,7 +196,6 @@ $TPHL = 22.00ns$
 
 ![Función de transferencia](IMAGENES/Tranfer.jpg "Función de transferencia $V_{in}$ vs $V_{out}$")
 
-### Fan-in 
 
 
 ### Características de voltaje
@@ -214,6 +217,15 @@ $TPHL = 22.00ns$
 
 Las fotos de las mediciones para CMOS y TTL se encuentran en: [Anexos de Mediciones](https://docs.google.com/document/d/1huVV0JdHspE3xCMzzdIQ4rvsg7iDnN15pNWeRtljhYE/edit?tab=t.0)
 
+### Fan-out
+
+Para obtener el Fan-out, como se explicó previamente en las simulaciones, se colocó un potenciometro como la carga del circuito. Cuando la tensión fue $V_{OH}$ el Fan - Out corresponde a la corriente de salida.
+
+![ttl](IMAGENES/Vfanoutttl.png "V fan out ttl")
+
+Donde la resitencia fue de $35\Omega$, por lo que la corriente correspondiente al Fan-out es de:
+
+$$I=\frac{2.474V}{35\Omega}=70mA $$
 
 ## Oscilador en Anillo CMOS
 
@@ -249,4 +261,4 @@ Salida Final:
 
 ![Oscilador de 3 compuertas](IMAGENES/Salida_Final_3cl.jpg "Oscilador de 3 compuertas salida final")
 
-En este caso, con el oscilador en anillo con tres negadores, vemos que, en la salida final, la del tercer negador, hay una pequeña caída de voltaje (alrededor de $0.2V$). Constrastando con las simulaciones realizadas se evidencia 
+En este caso, con el oscilador en anillo con tres negadores, vemos que, en la salida final, la del tercer negador, hay una pequeña caída de voltaje (alrededor de $0.2V$). 
