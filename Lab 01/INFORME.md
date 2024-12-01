@@ -153,6 +153,7 @@ $TPHL = 32.00ns$
 
 Para obtener el Fan-out, como se explicó previamente en las simulaciones, se colocó un potenciometro como la carga del circuito. Cuando la tensión fue $V_{OH}$ el Fan - Out corresponde a la corriente de salida.
 
+![ttl](IMAGENES/Vfanoutttl.png "V fan out ttl")
 
 
 
