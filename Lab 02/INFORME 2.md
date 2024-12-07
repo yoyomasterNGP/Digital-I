@@ -8,13 +8,65 @@
 ___
 
 ## Dominio comportamental
-### Entradas y salidas
-Para este problema vamos a tener en cuenta 4 entradas, que corresponden a:
+
+Empezaremos por definir las entradas y salidas del sistema. Para este problema vamos a tener en cuenta 4 entradas, que corresponden a:
 - Las dos fuentes de alimentación posibles (Red o baterías).
 - La presencia de luz solar.
 - El paro de emergencia.
 
 En cuanto a las salidas tendremos dos, un relé conmutador que definirá si la casa se alimenta por medio de la red o las baterías; y un relé energizador que permitirá a la casa conectarse a la red.
 
-![Especificaciones TTL](IMAGENES 2/74LS04.jpg "Hoja de especificaciones")
+![Diagrama de caja negra](IMAGENES 2/CN.JPG "Diagrama de caja negra")
 
+Antes de continuar vamos a hacer algunas aclaraciones sobre el funcionamiento del sistema
+- Si el desenergizador esta activo entonces la casa no tiene alimentación.
+- Si el conmutador está activo la casa se conecta a la red, si no está activo se conecta a las baterías.
+- La principal función del sol es dar prioridad en caso de que tanto la red como las baterías estén disponibles. Siguiendo la lógica de que las baterías se recargan con la luz del sol, cuando haya sol la prioridad será la red, cuando no haya sol la prioridad serán las baterías.
+- En caso de que solo una de las fuentes (red o batería) esté disponible, la casa se conectará a la fuente que este disponible sin importar el estado del sol.
+
+Con esto en mente podemos plantear la tabla de verdad
+
+| **Paro de emergencia** | **Sol** | **Baterías** | **Red** | **Conmutador** | **Desenergizador** |
+|:----------------------:|:-------:|:------------:|:-------:|:--------------:|:------------------:|
+|            0           |    0    |       0      |    0    |        0       |          0         |
+|            0           |    0    |       0      |    1    |        1       |          0         |
+|            0           |    0    |       1      |    0    |        0       |          0         |
+|            0           |    0    |       1      |    1    |        0       |          0         |
+|            0           |    1    |       0      |    0    |        1       |          0         |
+|            0           |    1    |       0      |    1    |        1       |          0         |
+|            0           |    1    |       1      |    0    |        0       |          0         |
+|            0           |    1    |       1      |    1    |        1       |          0         |
+|            1           |    0    |       0      |    0    |        0       |          1         |
+|            1           |    0    |       0      |    1    |        1       |          1         |
+|            1           |    0    |       1      |    0    |        0       |          1         |
+|            1           |    0    |       1      |    1    |        0       |          1         |
+|            1           |    1    |       0      |    0    |        1       |          1         |
+|            1           |    1    |       0      |    1    |        1       |          1         |
+|            1           |    1    |       1      |    0    |        0       |          1         |
+|            1           |    1    |       1      |    1    |        1       |          1         |
+
+El diagrama de flujo es el siguiente
+
+![Diagrama de flujo](IMAGENES 2/DF.JPG "Diagrama de flujo")
+
+## Dominio físico
+
+![Diagrama de ladder](IMAGENES 2/LAD.JPG "Diagrama de ladder")
+
+La simulación del lenguaje ladder se encuentra en el siguiente link: [Simulación circuito eléctrico](https://app.plcsimulator.online/AEIUClyaTTtEORz1RNlr)
+
+
+## Dominio estructural
+
+Mediante la tabla de verdad realizamos el diagrama de karnaugh del conmutador y del desenergizador
+
+![Karnaugh de conmutador](IMAGENES 2/DL.JPG "Karnaugh de conmutador")
+
+![Karnaugh de desenergizador](IMAGENES 2/DL.JPG "Karnaugh de desenergizador")
+
+Por tanto las ecuaciones booleanas quedan de la siguiente manera
+$$
+PE=DE\\
+C=\bar{B}\cdot S+\bar{B}\cdot R+R\cdot S\\
+C=\bar{B}\cdot (S+R)+R\cdot S
+$$
