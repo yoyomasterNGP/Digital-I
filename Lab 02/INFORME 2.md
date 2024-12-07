@@ -66,7 +66,9 @@ Mediante la tabla de verdad realizamos el diagrama de karnaugh del conmutador y 
 
 Por tanto las ecuaciones booleanas quedan de la siguiente manera
 $$
+\begin{align}
 PE=DE\\
 C=\bar{B}\cdot S+\bar{B}\cdot R+R\cdot S\\
 C=\bar{B}\cdot (S+R)+R\cdot S
+\end{align}
 $$
