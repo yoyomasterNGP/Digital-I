@@ -16,3 +16,5 @@ Para este problema vamos a tener en cuenta 4 entradas, que corresponden a:
 
 En cuanto a las salidas tendremos dos, un relé conmutador que definirá si la casa se alimenta por medio de la red o las baterías; y un relé energizador que permitirá a la casa conectarse a la red.
 
+![Especificaciones TTL](IMAGENES 2/74LS04.jpg "Hoja de especificaciones")
+
