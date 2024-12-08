@@ -65,10 +65,26 @@ Mediante la tabla de verdad realizamos el diagrama de karnaugh del conmutador y 
 ![Karnaugh de desenergizador](IMAGENES 2/DL.JPG "Karnaugh de desenergizador")
 
 Por tanto las ecuaciones booleanas quedan de la siguiente manera
+
 $$
 \begin{align}
-PE=DE\\
+DE=PE\\
 C=\bar{B}\cdot S+\bar{B}\cdot R+R\cdot S\\
 C=\bar{B}\cdot (S+R)+R\cdot S
 \end{align}
 $$
+
+Donde:
+- PE: Paro de emergencia.
+- DE: Desenergizador.
+- C: Conmutador.
+- B: Baterías.
+- R: Red.
+- S: Sol.
+
+Con esto ya podemos diseñar nuestro circuito digital
+
+![Digital](IMAGENES 2/CD.JPG "Digital")
+![Tabla de verdad Digital](IMAGENES 2/CD.JPG "Tabla de verdad Digital")
+![Karnaugh conmutador Digital](IMAGENES 2/CD.JPG "Karnaugh conmutador Digital")
+![Karnaugh desenergizador Digital](IMAGENES 2/CD.JPG "Karnaugh desenergizador Digital")
