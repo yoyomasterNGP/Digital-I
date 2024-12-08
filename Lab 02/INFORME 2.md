@@ -16,7 +16,7 @@ Empezaremos por definir las entradas y salidas del sistema. Para este problema v
 
 En cuanto a las salidas tendremos dos, un relé conmutador que definirá si la casa se alimenta por medio de la red o las baterías; y un relé energizador que permitirá a la casa conectarse a la red.
 
-![Diagrama de caja negra](Lab 02/IMAGENES 2/CN.JPG "Diagrama de caja negra")
+![Diagrama de caja negra](IMAGENES_2/CN.JPG "Diagrama de caja negra")
 
 Antes de continuar vamos a hacer algunas aclaraciones sobre el funcionamiento del sistema
 - Si el desenergizador esta activo entonces la casa no tiene alimentación.
@@ -47,11 +47,11 @@ Con esto en mente podemos plantear la tabla de verdad
 
 El diagrama de flujo es el siguiente
 
-![Diagrama de flujo](IMAGENES 2/DF.JPG "Diagrama de flujo")
+![Diagrama de flujo](IMAGENES_2/DF.JPG "Diagrama de flujo")
 
 ## Dominio físico
 
-![Diagrama de ladder](IMAGENES 2/LAD.JPG "Diagrama de ladder")
+![Diagrama de ladder](IMAGENES_2/LAD.JPG "Diagrama de ladder")
 
 La simulación del lenguaje ladder se encuentra en el siguiente link: [Simulación circuito eléctrico](https://app.plcsimulator.online/AEIUClyaTTtEORz1RNlr)
 
@@ -60,9 +60,9 @@ La simulación del lenguaje ladder se encuentra en el siguiente link: [Simulaci�
 
 Mediante la tabla de verdad realizamos el diagrama de karnaugh del conmutador y del desenergizador
 
-![Karnaugh de conmutador](IMAGENES 2/DL.JPG "Karnaugh de conmutador")
+![Karnaugh de conmutador](IMAGENES_2/KC.JPG "Karnaugh de conmutador")
 
-![Karnaugh de desenergizador](IMAGENES 2/DL.JPG "Karnaugh de desenergizador")
+![Karnaugh de desenergizador](IMAGENES_2/KD.JPG "Karnaugh de desenergizador")
 
 Por tanto las ecuaciones booleanas quedan de la siguiente manera
 
@@ -84,7 +84,7 @@ Donde:
 
 Con esto ya podemos diseñar nuestro circuito digital
 
-![Digital](IMAGENES 2/CD.JPG "Digital")
-![Tabla de verdad Digital](IMAGENES 2/CD.JPG "Tabla de verdad Digital")
-![Karnaugh conmutador Digital](IMAGENES 2/CD.JPG "Karnaugh conmutador Digital")
-![Karnaugh desenergizador Digital](IMAGENES 2/CD.JPG "Karnaugh desenergizador Digital")
+![Digital](IMAGENES_2/CD.JPG "Digital")
+![Tabla de verdad Digital](IMAGENES_2/TV_D.JPG "Tabla de verdad Digital")
+![Karnaugh conmutador Digital](IMAGENES_2/KC_D.JPG "Karnaugh conmutador Digital")
+![Karnaugh desenergizador Digital](IMAGENES_2/KD_D.JPG "Karnaugh desenergizador Digital")
