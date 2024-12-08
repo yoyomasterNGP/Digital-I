@@ -47,7 +47,7 @@ Con esto en mente podemos plantear la tabla de verdad
 
 El diagrama de flujo es el siguiente
 
-![Diagrama de flujo](IMAGENES_2/DF.JPG "Diagrama de flujo")
+![Diagrama de flujo](IMAGENES_2/DF.png "Diagrama de flujo")
 
 ## Dominio físico
 
@@ -88,3 +88,7 @@ Con esto ya podemos diseñar nuestro circuito digital
 ![Tabla de verdad Digital](IMAGENES_2/TV_D.JPG "Tabla de verdad Digital")
 ![Karnaugh conmutador Digital](IMAGENES_2/KC_D.JPG "Karnaugh conmutador Digital")
 ![Karnaugh desenergizador Digital](IMAGENES_2/KD_D.JPG "Karnaugh desenergizador Digital")
+
+Finalmente el circuito a implementar es el siguiente
+
+![Circuito](IMAGENES_2/CR.JPG "Circuito")
