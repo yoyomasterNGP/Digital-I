@@ -16,7 +16,7 @@ Empezaremos por definir las entradas y salidas del sistema. Para este problema v
 
 En cuanto a las salidas tendremos dos, un relé conmutador que definirá si la casa se alimenta por medio de la red o las baterías; y un relé energizador que permitirá a la casa conectarse a la red.
 
-![Diagrama de caja negra](IMAGENES 2/CN.JPG "Diagrama de caja negra")
+![Diagrama de caja negra](Lab 02/IMAGENES 2/CN.JPG "Diagrama de caja negra")
 
 Antes de continuar vamos a hacer algunas aclaraciones sobre el funcionamiento del sistema
 - Si el desenergizador esta activo entonces la casa no tiene alimentación.
