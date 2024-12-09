@@ -85,6 +85,11 @@ Donde:
 Con esto ya podemos diseñar nuestro circuito digital
 
 ![Digital](IMAGENES_2/CD.JPG "Digital")
+
+En contraste con este último diagrama obtenido en digital, se tiene el siguiente circuito obtenido con el comando make rtl al sintetizar el código en la fpga:
+
+![MakeRTL](IMAGENES_2/CD.JPG "Digital")
+
 ![Tabla de verdad Digital](IMAGENES_2/TV_D.JPG "Tabla de verdad Digital")
 ![Karnaugh conmutador Digital](IMAGENES_2/KC_D.JPG "Karnaugh conmutador Digital")
 ![Karnaugh desenergizador Digital](IMAGENES_2/KD_D.JPG "Karnaugh desenergizador Digital")
