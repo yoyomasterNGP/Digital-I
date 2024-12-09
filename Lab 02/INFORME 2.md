@@ -88,7 +88,9 @@ Con esto ya podemos diseñar nuestro circuito digital
 
 En contraste con este último diagrama obtenido en digital, se tiene el siguiente circuito obtenido con el comando make rtl al sintetizar el código en la fpga:
 
-![MakeRTL](IMAGENES_2/CD.JPG "Digital")
+![MakeRTL](IMAGENES_2/make_rtl.png "MakeRTL")
+
+Donde observamos que efectivamente es el mismo circuito y, en este caso, se utilizan las mismas compuertas lógicas físicamente, es decir, en el chip de la fpga.
 
 ![Tabla de verdad Digital](IMAGENES_2/TV_D.JPG "Tabla de verdad Digital")
 ![Karnaugh conmutador Digital](IMAGENES_2/KC_D.JPG "Karnaugh conmutador Digital")
