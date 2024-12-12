@@ -87,6 +87,8 @@ Con esto ya podemos diseñar nuestro circuito digital
 
 ## Análisis
 
+Se puede evidenciar en el video que el sistema desde el instante inicial se encuentra activo algo que en general no debería ocurrir ya que para el momento t=0000s se debería tener todo apagado pero pues en este caso no ocurre por la esctructura del circuito diseñado. Básicamente el circuito cumple con los estándares pedidos para el diseño y se obtiene la disposición requerida para abastecer la finca familiar, y para que sea eficiente energéticamente.
+
 ## Conclusiones
 
 
