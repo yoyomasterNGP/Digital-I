@@ -85,6 +85,9 @@ Donde:
 Con esto ya podemos diseñar nuestro circuito digital
 ## Resultados Experimentales
 
+[![Diseño de Sistema de Energía Solar](https://drive.google.com/file/d/1AAEFybpyCXSrWc_owh3aqdBvK1kTkQ-j/view?usp=drivesdk)](https://drive.google.com/file/d/1AAEFybpyCXSrWc_owh3aqdBvK1kTkQ-j/view?usp=drivesdk)
+
+
 ## Análisis
 
 Se puede evidenciar en el video que el sistema desde el instante inicial se encuentra activo algo que en general no debería ocurrir ya que para el momento t=0000s se debería tener todo apagado pero pues en este caso no ocurre por la esctructura del circuito diseñado. Básicamente el circuito cumple con los estándares pedidos para el diseño y se obtiene la disposición requerida para abastecer la finca familiar, y para que sea eficiente energéticamente.
@@ -92,3 +95,10 @@ Se puede evidenciar en el video que el sistema desde el instante inicial se encu
 ## Conclusiones
 
 
+- El proyecto de sistema de energía solar fue muy interesante y nos sirvió para entender cómo transformar una necesidad práctica en una solución tecnológica. Aprendimos que un mismo problema se puede abordar desde múltiples perspectivas, desde lo comportamental hasta la implementación en FPGA.
+
+- Descubrimos la importancia de un enfoque sistemático en diseño electrónico. Cada etapa del proyecto añadió capas de conocimiento y refinamiento, mostrándome las diferentes tecnologías para resolver problemas de ingeniería.
+
+- Las herramientas utilizadas, desde simuladores ladder hasta entornos de síntesis en FPGA, expandieron nuestra visión del diseño electrónico. Cada una aportó una perspectiva única para validar y refinar soluciones.
+
+- Las lecciones principales fueron la importancia de la metodología sistemática y un enfoque integral. Aprendimos que el diseño moderno requiere pensamiento sistémico y capacidad de abstraer problemas más allá de lo tradicional.
