@@ -85,8 +85,9 @@ Donde:
 Con esto ya podemos diseñar nuestro circuito digital
 ## Resultados Experimentales
 
-[![Diseño de Sistema de Energía Solar](https://drive.google.com/file/d/1AAEFybpyCXSrWc_owh3aqdBvK1kTkQ-j/view?usp=drivesdk)](https://drive.google.com/file/d/1AAEFybpyCXSrWc_owh3aqdBvK1kTkQ-j/view?usp=drivesdk)
 
+![](https://drive.google.com/file/d/1AAEFybpyCXSrWc_owh3aqdBvK1kTkQ-j/view?usp=drivesdk)
+[Diseño de Sistema de Energía Solar Finca - Funcionalidad](https://drive.google.com/file/d/1AAEFybpyCXSrWc_owh3aqdBvK1kTkQ-j/view?usp=drivesdk)
 
 ## Análisis
 
