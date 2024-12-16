@@ -84,10 +84,14 @@ Donde:
 
 Con esto ya podemos diseñar nuestro circuito digital
 Con esto ya podemos diseñar nuestro circuito digital
-![Digital](IMAGENES 2/CD.JPG "Digital")
-![Tabla de verdad Digital](IMAGENES 2/CD.JPG "Tabla de verdad Digital")
-![Karnaugh conmutador Digital](IMAGENES 2/CD.JPG "Karnaugh conmutador Digital")
-![Karnaugh desenergizador Digital](IMAGENES 2/CD.JPG "Karnaugh desenergizador Digital")
+
+![Digital](IMAGENES_2/CD.JPG "Digital")
+![Tabla de verdad Digital](IMAGENES_2/TV_D.JPG "Tabla de verdad Digital")
+![Karnaugh conmutador Digital](IMAGENES_2/KC_D.JPG "Karnaugh conmutador Digital")
+![Karnaugh desenergizador Digital](IMAGENES_2/KD_D.JPG "Karnaugh desenergizador Digital")
+
+Finalmente el circuito a implementar es el siguiente
+![Circuito](IMAGENES_2/CR.JPG "Circuito")
 ## Resultados Experimentales
 
 
