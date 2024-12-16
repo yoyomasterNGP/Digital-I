@@ -83,6 +83,11 @@ Donde:
 - S: Sol.
 
 Con esto ya podemos diseñar nuestro circuito digital
+Con esto ya podemos diseñar nuestro circuito digital
+![Digital](IMAGENES 2/CD.JPG "Digital")
+![Tabla de verdad Digital](IMAGENES 2/CD.JPG "Tabla de verdad Digital")
+![Karnaugh conmutador Digital](IMAGENES 2/CD.JPG "Karnaugh conmutador Digital")
+![Karnaugh desenergizador Digital](IMAGENES 2/CD.JPG "Karnaugh desenergizador Digital")
 ## Resultados Experimentales
 
 
