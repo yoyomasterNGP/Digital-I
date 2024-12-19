@@ -102,7 +102,7 @@ Finalmente el circuito a implementar es el siguiente
 ![Circuito](IMAGENES_2/CR.JPG "Circuito")
 ## Resultados Experimentales
 
-Para mostrar los resultados se ha realizado un video, se comparte el link del mimo en un enlace de Youtube y Drive.
+Para mostrar los resultados se ha realizado un video, se comparte el link del mismo en un enlace de Youtube y Drive.
 
 ![](https://youtu.be/HjxQ5l-1AZc)
 [Youtube - Diseño de Sistema de Energía Solar Finca - Funcionalidad](https://youtu.be/HjxQ5l-1AZc)
