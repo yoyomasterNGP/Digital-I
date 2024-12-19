@@ -55,6 +55,7 @@ El diagrama de flujo es el siguiente
 
 La simulación del lenguaje ladder se encuentra en el siguiente link: [Simulación circuito eléctrico](https://app.plcsimulator.online/AEIUClyaTTtEORz1RNlr)
 
+![Diagrama Control](IMAGENES_2/Sistema_control.png "Sistema de control")
 
 ## Dominio estructural
 
