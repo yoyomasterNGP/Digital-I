@@ -9,3 +9,22 @@
 ___
 
 ## Dominio comportamental
+
+## Dominio comportamental
+
+## Dominio físico
+
+## Dominio estructural
+
+## Resultados Experimentales
+
+Para mostrar los resultados se ha realizado un video, se comparte el link del mismo en un enlace de Youtube.
+
+
+## Análisis
+
+## Conclusiones
+
+-
+-
+-
