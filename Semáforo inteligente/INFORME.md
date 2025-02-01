@@ -33,5 +33,51 @@ La entrada y salida del tráfico la simulamos con 2 pulsadores, "+" y "-" respec
 
 El comparador tiene 4 entradas de 6 bits, que corresponde al tráfico de cada semáforo y son NA, NB, NC, ND; y 4 salidas de 1 bit TA, TB, TC y TD que representarán cuál es el semáforo con mayor tráfico. Para definir el número mayor se emparejan los números en NA - NB, y NC - ND y se comparan, los dos números mayores pasan a un nuevo comparador y con esto ya sabemos cúal es el número mayor. Además de esto, hay una serie de compuertas lógicas y multiplexores que defininen las salidas. Una aclaración con este circuito es ¿qué pasaría si dos o más semáforos tienen el mismo tráfico?, en este caso se escogió de manera arbitraria la siguiente jerarquía:
 
+1. Tráfico A
+2. Tráfico B
+3. Tráfico C
+4. Tráfico D
 
+Lo que quiere decir que el semáforo A tiene mayor prioridad y el semáforo D el de menor prioridad.
+
+### Máquina de estados 
+La máquina de estados tendrá 4 de entradas de 1 bit que son TA, TB, TC y TD que representan el estado presente, a partir de esto definimos los distintos estados que puede tomar la máquina.
+
+#### Estados
+
+De manera intuitiva se podría pensar que los estados de la máquina son todas las posibles combinaciones que pueden haber entre las luces de los semáforos, sin embargo esto no es cierto, ya que hay una restricción de que solo puede haber un semáforo en verde a la vez; así que en base a esto definimos nuestros 4 primero estados:
+
+1. Semáforo A en verde y B, C, D en rojo (E0)
+2. Semáforo B en verde y A, C, D en rojo (E2)
+3. Semáforo C en verde y A, B. D en rojo (E4)
+4. Semáforo D en verde y A, B, C en rojo (E6)
+
+ Con esto nos percatamos que los estados restantes corresponden a la transición entre cada uno de los 4 estados, siendo los siguientes:
+
+5. Semáforo A y B en amarillo y C y D en rojo (E1)
+6. Semáforo A y C en amarillo y B y D en rojo (E9)
+7. Semáforo A y D en amarillo y B y C en rojo (E8)
+8. Semáforo B y C en amarillo y A y D en rojo (E3)
+9. Semáforo B y D en amarillo y A y C en rojo (E7)
+10. Semáforo C y D en amarillo y A y B en rojo (E5)
+
+Obteniendo un total de 10 estados
+
+#### Transición de estados
+
+Empezamos por el diagrama de transición de estados
+
+![Diagrama de transición de estados](IMAGENES_PF/DTS.png "Diagrama de transición de estados")
+
+Para codificar los estados vamos a usar binario obteniendo la siguiente tabla
+
+![Código de estados](IMAGENES_PF/CES.JPG "Código de estados")
+
+Con base a la codificación nos damos cuenta de que necesitamos 4 Flip-Flops para nuestra máquina de estados
+
+Con esto ya podemos armar nuestra tabla de transición de estados
+
+![Tabla de transición de estados](IMAGENES_PF/TTS.JPG "Tabla de transición de estados")
+
+Las ecuacioes de $Q0'\; \; \; Q1'\; \; \; Q2'\; \; \; Q3'$ las obtenemos a partir de la suma de productos (SoP), también tenemos en cuenta la tabla de transición y la tabla de excitación de los diferentes Flip-Flop; y se determinó que los Flip-Flop que generan ecuaciones con menos términos, son Flip-Flop tipo D para $Q0' \; \; \; Q3'$ y Flip-Flop tipo JK para $Q1' \; \; \; Q2'$.
 
