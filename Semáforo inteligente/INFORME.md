@@ -79,5 +79,12 @@ Con esto ya podemos armar nuestra tabla de transición de estados
 
 ![Tabla de transición de estados](IMAGENES_PF/TTS.JPG "Tabla de transición de estados")
 
-Las ecuacioes de $Q0'\; \; \; Q1'\; \; \; Q2'\; \; \; Q3'$ las obtenemos a partir de la suma de productos (SoP), también tenemos en cuenta la tabla de transición y la tabla de excitación de los diferentes Flip-Flop; y se determinó que los Flip-Flop que generan ecuaciones con menos términos, son Flip-Flop tipo D para $Q0' \; \; \; Q3'$ y Flip-Flop tipo JK para $Q1' \; \; \; Q2'$.
+Las ecuaciones de $Q0'\; Q1'\;  Q2'\; Q3'$ las obtenemos a partir de la suma de productos (SoP), también tenemos en cuenta la tabla de transición y la tabla de excitación de los diferentes Flip-Flop; y se determinó que los Flip-Flop que generan ecuaciones con menos términos, son Flip-Flop tipo D para $Q0' \; Q3'$ y Flip-Flop tipo JK para $Q1' \; Q2'$. De manera que obtenemos la siguiente tabla.
+
+![Tabla de excitación Flip-Flop](IMAGENES_PF/TEFF.jpg "Tabla de excitación Flip-Flop")
+![Excitación Flip-Flop](IMAGENES_PF/TE.JPG "Excitación Flip-Flop")
+
+La ecuaciones que obtenemos son las siguientes
+
+
 
