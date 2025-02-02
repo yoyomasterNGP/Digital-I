@@ -86,5 +86,81 @@ Las ecuaciones de $Q0'\; Q1'\;  Q2'\; Q3'$ las obtenemos a partir de la suma de 
 
 La ecuaciones que obtenemos son las siguientes
 
+$$
+\begin{align}
+D0=(TC+TD)\cdot \bar{Q0}\bar{Q1}\bar{Q2}\bar{Q3}+TA\cdot(\bar{Q0} Q1 \bar{Q2}\bar{Q3} + \bar{Q0} Q1Q2 \bar{Q3})\\
+J1=TD\cdot (\bar{Q0}\bar{Q1} Q2 \bar{Q3} + Q0 \bar{Q1}\bar{Q2}\bar{Q3})+TC\cdot (\bar{Q0}\bar{Q1} Q2 Q3 + Q0 \bar{Q1}\bar{Q2} Q3\\
+K1=(TA+TB) \cdot (\bar{Q0} Q1 \bar{Q2}\bar{Q3})+TA\cdot (\bar{Q0} Q1 Q2 \bar{Q3})+TB\cdot (\bar{Q0} Q1Q2Q3)\\
+J2=TB\cdot (\bar{Q0} Q1 \bar{Q2}\bar{Q3} + \bar{Q0}\bar{Q1}\bar{Q2} Q3) + TD\cdot (\bar{Q0} Q1 \bar{Q2} Q3 + Q0 \bar{Q1}\bar{Q2}\bar{Q3})\\
+K2=(TA+TC)\cdot (\bar{Q0} Q1Q2 \bar{Q3}) +TA\cdot (\bar{Q0}\bar{Q1} Q2 \bar{Q3})+ TC\cdot (\bar{Q0}\bar{Q1} Q2Q3)\\
+D3=(TB+TC)\cdot (\bar{Q0}\bar{Q1}\bar{Q2}\bar{Q3})+(TA+TC+TD)\cdot (\bar{Q0}\bar{Q1}Q2 \bar{Q3})+(TA+TB+TD)\cdot (\bar{Q0} Q1 \bar{Q2}\bar{Q3})+(TB+TC)\cdot (\bar{Q0} Q1Q2 \bar{Q3})
+\end{align}
+$$
 
+Obteniendo el siguiente circuito
 
+![Máquina de estados](IMAGENES_PF/FSM.JPG "Máquina de estados")
+
+###Salidas
+
+Planteamos la tabla de salidas
+
+![Tabla de salidas](IMAGENES_PF/TS.JPG "Tabla de salidas")
+
+Planteamos la tabla de Karnaugh de cada salida para hallar su circuito
+
+![Karnaugh luz verde semáforo A](IMAGENES_PF/KVA.JPG "Karnaugh luz verde semáforo A")
+
+$$VA=\bar{Q0}\bar{Q1}\bar{Q2}\bar{Q3}$$
+
+![Karnaugh luz amarilla semáforo A](IMAGENES_PF/KAA.JPG "Karnaugh luz amarilla semáforo A")
+
+$$AA=Q0+\bar{Q1}\bar{Q2}Q3$$
+
+![Karnaugh luz roja semáforo A](IMAGENES_PF/KRA.JPG "Karnaugh luz roja semáforo A")
+
+$$RA=Q1+Q2$$
+
+![Circuito de salida semáforo A](IMAGENES_PF/SA.JPG "Circuito de salida semáforo A")
+
+![Karnaugh luz verde semáforo B](IMAGENES_PF/KVB.JPG "Karnaugh luz verde semáforo B")
+
+$$VB=\bar{Q1} Q2 \bar{Q3}$$
+
+![Karnaugh luz amarilla semáforo B](IMAGENES_PF/KAB.JPG "Karnaugh luz amarilla semáforo B")
+
+$$AB=Q2Q3+\bar{Q0}\bar{Q1} Q3$$
+
+![Karnaugh luz roja semáforo B](IMAGENES_PF/KRB.JPG "Karnaugh luz roja semáforo B")
+
+$$RB=Q0+\bar{Q2}\bar{Q3}+Q1Q2\bar{Q3}+Q1\bar{Q2}$$
+
+![Circuito de salida semáforo B](IMAGENES_PF/SB.JPG "Circuito de salida semáforo B")
+
+![Karnaugh luz verde semáforo C](IMAGENES_PF/KVC.JPG "Karnaugh luz verde semáforo C")
+
+$$VC=Q1\bar{Q2}\bar{Q3}$$
+
+![Karnaugh luz amarilla semáforo C](IMAGENES_PF/KAC.JPG "Karnaugh luz amarilla semáforo C")
+
+$$AC=Q1 \bar{Q2} Q3+Q0 \bar{Q2} Q3+\bar{Q1} Q2Q3$$
+
+![Karnaugh luz roja semáforo C](IMAGENES_PF/KRC.JPG "Karnaugh luz roja semáforo C")
+
+$$RC=Q2\bar{Q3}+Q1Q2+\bar{Q0}+\bar{Q1}+\bar{Q2}+Q0\bar{Q1}\bar{Q3}$$
+
+![Circuito de salida semáforo C](IMAGENES_PF/SC.JPG "Circuito de salida semáforo C")
+
+![Karnaugh luz verde semáforo D](IMAGENES_PF/KVD.JPG "Karnaugh luz verde semáforo D")
+
+$$VD=Q2\bar{Q3} Q1$$
+
+![Karnaugh luz amarilla semáforo D](IMAGENES_PF/KAD.JPG "Karnaugh luz amarilla semáforo D")
+
+$$AD=\bar{Q2}\bar{Q3} Q0+Q3Q1$$
+
+![Karnaugh luz roja semáforo D](IMAGENES_PF/KRD.JPG "Karnaugh luz roja semáforo D")
+
+$$RD=\bar{Q2}\bar{Q3}\bar{Q0}+Q3\bar{Q1}+\bar{Q0}\bar{Q1}$$
+
+![Circuito de salida semáforo D](IMAGENES_PF/SD.JPG "Circuito de salida semáforo D")
