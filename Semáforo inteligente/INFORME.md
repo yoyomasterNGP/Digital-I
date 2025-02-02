@@ -101,7 +101,7 @@ Obteniendo el siguiente circuito
 
 ![Máquina de estados](IMAGENES_PF/FSM.JPG "Máquina de estados")
 
-###Salidas
+### Salidas
 
 Planteamos la tabla de salidas
 
