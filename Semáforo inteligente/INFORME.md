@@ -254,7 +254,7 @@ endmodule
 Luego de crear el circuito en el programa Digital, se exporta a lenguaje Verilog utilizando la opción disponible en este programa. A continuación, se añaden los divisores de frecuencia correspondientes y, finalmente, se implementa el código previamente mostrado para convertir el número binario a BCD, ya que esta conversión no fue posible realizarla en el programa Digital. El circuito sintonizado en la FPGA es:
 
 
-![Circuito Final](IMAGENES_PF/7top.png "Circuito Final")
+![Circuito Final](IMAGENES_PF/top.png "Circuito Final")
 
 
 ## Referencias
