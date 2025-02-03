@@ -215,7 +215,43 @@ Luego de obtener dicho número, se procede a transformarlo para su visualizació
 ![Circuito 7 Segmentos](IMAGENES_PF/7segmen.png "Circuito 7 Segmentos")
 
 
-##
+### Divisores de frecuencia
+
+La FPGA utilizada cuenta con un clock integrado de 25 MHz, por lo que es necesario generar una señal de reloj adecuada para el control de los semáforos. Siguiendo la convención establecida, los tiempos de simulación serán de 10 segundos en verde y 2 segundos en amarillo, antes de cambiar a rojo. Para lograr esto, se implementará un divisor de frecuencia mediante el siguiente código en Verilog, el cual, básicamente, toma la señal de entrada de 25 MHz y la divide a una frecuencia más baja. El proceso se realiza utilizando un contador que se incrementa en cada flanco positivo del reloj de entrada. Cuando el contador alcanza el valor máximo calculado, que se obtiene dividiendo la frecuencia de entrada entre la de salida, el contador se reinicia y se invierte la señal de salida, logrando así la reducción de la frecuencia. Este proceso permite generar una señal de reloj con una frecuencia adecuada para los semáforos.
+
+```verilog
+module divFreq #(
+  parameter integer FREQ_IN = 25000000,
+  parameter integer FREQ_OUT = 1,
+  parameter integer INIT = 0
+) (
+    // Inputs and output ports
+    input CLK_IN,
+    output reg CLK_OUT = 0
+);
+
+  localparam integer COUNT = (FREQ_IN / FREQ_OUT) / 2;
+  localparam integer SIZE = $clog2(COUNT);
+  localparam integer LIMIT = COUNT - 1;
+
+  // Declaración de señales [reg, wire]
+  reg [SIZE-1:0] count = INIT;
+
+  // Descripción del comportamiento
+  always @(posedge CLK_IN) begin
+    if (count == LIMIT) begin
+      count   <= 0;
+      CLK_OUT <= ~CLK_OUT;
+    end else begin
+      count <= count + 1;
+    end
+  end
+endmodule
+```
+
+## Sintesis FPGA
+
+Luego de crear el circuito en el programa Digital, se exporta a lenguaje Verilog utilizando la opción disponible en este programa. A continuación, se añaden los divisores de frecuencia correspondientes y, finalmente, se implementa el código previamente mostrado para convertir el número binario a BCD, ya que esta conversión no fue posible realizarla en el programa Digital. El circuito sintonizado en la FPGA es:
 
 
 
