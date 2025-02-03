@@ -209,8 +209,16 @@ module div (
     end
 endmodule
 ```
+Luego de obtener dicho número, se procede a transformarlo para su visualización en un display de 7 segmentos. Para ello, es necesario obtener las ecuaciones del circuito e implementarlas en el programa digital. Debido a la amplia utilización de este tipo de displays, dichas ecuaciones pueden encontrarse en diversas fuentes. En este caso, se implementarán según la referencia número [1].
 
-Luego de tener dicho número se procedé a transformar a 7 segmentos:
+
+![Circuito 7 Segmentos](IMAGENES_PF/7segmen.png "Circuito 7 Segmentos")
+
+
+
+## Referencias
+
+[1]“Laboratorios fundamentos circuitos digitales: práctica #5,” Laboratorios Fundamentos Circuitos Digitales. https://blogfundamentoscircuitosdigitales.blogspot.com/p/practica-5.html
 
 
 
