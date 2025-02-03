@@ -164,3 +164,61 @@ $$AD=\bar{Q2}\bar{Q3} Q0+Q3Q1$$
 $$RD=\bar{Q2}\bar{Q3}\bar{Q0}+Q3\bar{Q1}+\bar{Q0}\bar{Q1}$$
 
 ![Circuito de salida semáforo D](IMAGENES_PF/SD.JPG "Circuito de salida semáforo D")
+
+### Codificación a BCD y 7 segmentos
+
+El proyecto contará con una cabina de mando donde se mostrará el número de vehículos. La situación es la siguiente: se tiene un número binario de 6 bits, proporcionado por el modulo contador, con una capacidad máxima de 63 vehículos. Será necesario convertir este número a BCD y, posteriormente, a una representación en display de 7 segmentos.
+
+La conversión a BCD se realizará con el siguiente código en Verilog, el cual, mediante un bucle for, comparará constantemente el número después de restarle 10 unidades. De esta forma, se determinará cuántas veces se puede restar 10 al valor original para obtener el dígito de las decenas. Finalmente, el residuo tras restar 10 repetidamente (hasta que sea menor que 10) corresponderá al dígito de las unidades.
+
+```verilog
+module div (
+    input [5:0] NUM,   // Número binario de 6 bits (0 a 63)
+    output reg A0, // Bit más significativo del primer dígito (decenas)
+    output reg B0, // Bit 2 del primer dígito
+    output reg C0, // Bit 1 del primer dígito
+    output reg D0, // Bit menos significativo del primer dígito (decenas)
+    output reg A1, // Bit más significativo del segundo dígito (unidades)
+    output reg B1, // Bit 2 del segundo dígito
+    output reg C1, // Bit 1 del segundo dígito
+    output reg D1  // Bit menos significativo del segundo dígito (unidades)
+);
+    integer i;
+    reg [5:0] temp;
+    reg [3:0] dec_tens;
+    reg [3:0] dec_ones;
+    
+    always @(*) begin
+        temp = NUM;
+        dec_tens = 4'b0000;
+        dec_ones = 4'b0000;
+        
+        // Restar 10 hasta que el número sea menor que 10
+        for (i = 0; i < 6; i = i + 1) begin
+            if (temp >= 10) begin
+                temp = temp - 10;
+                dec_tens = dec_tens + 4'b0001;
+            end
+        end
+        
+        // Lo que queda es el dígito de unidades
+        dec_ones = temp[3:0];
+        
+        {A0, B0, C0, D0} = dec_tens;
+        {A1, B1, C1, D1} = dec_ones;
+    end
+endmodule
+```
+
+Luego de tener dicho número se procedé a transformar a 7 segmentos:
+
+
+
+
+
+
+ 
+
+
+
+
