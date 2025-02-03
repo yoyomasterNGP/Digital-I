@@ -25,7 +25,7 @@ El proyecto lo definimos en distintas etapas. Primeramente, las señales de entr
 Vamos a trabajar con un contador de 6 bits, de esta manera se puede contar tráfico del 0 al 63.
 ![Contador](IMAGENES_PF/CONT.JPG "Contador")
 
-La entrada y salida del tráfico la simulamos con 2 pulsadores, "+" y "-" respectivamente; así mismo las entradas "++" y "--" cumplen la misma función pero se conectan con una señal reloj adicional para subir o bajar más rápido el contador, aunque no tienen niguna aplicación real. Los valores de los contadores se restan para sacar el tráfico total y con ello obtenemos la salida "Num" que es el número de 6 bits. Adicional a esto tenemos 2 circuitos combinacionales que tienen como salida "L" y "M", la "L" impide que el número pase de 63 a 0 y la "M" impide que el número pase de 0 a 63.
+La entrada y salida del tráfico la simulamos con 2 pulsadores, "+" y "-" respectivamente; así mismo las entradas "++" y "--" cumplen la misma función pero se conectan con una señal reloj adicional para subir o bajar más rápido el contador, aunque no tienen niguna aplicación real. Los valores de los contadores se restan para sacar el tráfico total y con ello obtenemos la salida "Num" que es el número de 6 bits. Adicional a esto tenemos 2 circuitos combinacionales que tienen como salida "L" y "M", los cuales activan o desactivan la función enable de los contadores. La "L" impide que el número pase de 63 a 0 y la "M" impide que el número pase de 0 a 63.
 
 ### Comparador 
 
