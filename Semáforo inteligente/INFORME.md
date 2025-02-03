@@ -167,9 +167,9 @@ $$RD=\bar{Q2}\bar{Q3}\bar{Q0}+Q3\bar{Q1}+\bar{Q0}\bar{Q1}$$
 
 ### Codificación a BCD y 7 segmentos
 
-El proyecto contará con una cabina de mando donde se mostrará el número de vehículos. La situación es la siguiente: se tiene un número binario de 6 bits, proporcionado por el modulo contador, con una capacidad máxima de 63 vehículos. Será necesario convertir este número a BCD y, posteriormente, a una representación en display de 7 segmentos.
+El proyecto contará con una cabina de mando donde se mostrará el número de vehículos en cada intersección. La situación es la siguiente: se tiene un número binario de 6 bits, proporcionado por el modulo contador, con una capacidad máxima de 63 vehículos. Será necesario convertir este número a BCD y, posteriormente, a una representación en display de 7 segmentos.
 
-La conversión a BCD se realizará con el siguiente código en Verilog, el cual, mediante un bucle for, comparará constantemente el número después de restarle 10 unidades. De esta forma, se determinará cuántas veces se puede restar 10 al valor original para obtener el dígito de las decenas. Finalmente, el residuo tras restar 10 repetidamente (hasta que sea menor que 10) corresponderá al dígito de las unidades.
+La conversión a BCD se realizará con el siguiente código en Verilog, el cual, mediante un bucle for, comparará constantemente el número de entrada con 10. Si el número es mayor, se le restarán 10 unidades y el proceso se repetirá. De lo contrario, el bucle finalizará. De esta forma, se determinará cuántas veces se puede restar 10 al valor original para obtener el dígito de las decenas. Finalmente, el residuo tras restar 10 repetidamente (hasta que sea menor que 10) corresponderá al dígito de las unidades.
 
 ```verilog
 module div (
@@ -213,6 +213,9 @@ Luego de obtener dicho número, se procede a transformarlo para su visualizació
 
 
 ![Circuito 7 Segmentos](IMAGENES_PF/7segmen.png "Circuito 7 Segmentos")
+
+
+##
 
 
 
