@@ -308,6 +308,7 @@ Otra complicación surgió en la implementación y codificación de los displays
 ## Referencias
 
 [1]“Laboratorios fundamentos circuitos digitales: práctica #5,” Laboratorios Fundamentos Circuitos Digitales. https://blogfundamentoscircuitosdigitales.blogspot.com/p/practica-5.html
+
 [2] David Harris & Sarah Harris, Digital design and computer architecture, Morgan Kauffman, 2004
 
 
