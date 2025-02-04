@@ -219,6 +219,7 @@ Luego de obtener dicho número, se procede a transformarlo para su visualizació
 
 ![Circuito 7 Segmentos](IMAGENES_PF/7segmen.png "Circuito 7 Segmentos")
 
+![Circuito 7's Multiplexor](IMAGENES_PF/multiplexor.png "Circuito 7's Multiplexor")
 
 ### Divisores de frecuencia
 
