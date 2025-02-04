@@ -1,5 +1,14 @@
 # Semáforo inteligente
 
+| Electrónica Digital I | Grupo 4 | Equipo 3 |
+|------------------------|---------|----------|
+
+- Nicolás Garzón Peña
+- José Alejandro López Vargas
+- Johan Stiven Tovar López
+___
+
+
 ## Introducción
 
 En muchas ciudades del mundo, los problemas de movilidad generan pérdidas de tiempo, molestias y malestares para los usuarios. En particular, en la capital de nuestro país, la congestión vehicular en horas pico dificulta la circulación y reduce la eficiencia del transporte.
@@ -114,6 +123,8 @@ Planteamos la tabla de salidas
 
 Planteamos la tabla de Karnaugh de cada salida para hallar su circuito
 
+#### Semáforo A
+
 ![Karnaugh luz verde semáforo A](IMAGENES_PF/KVA.JPG "Karnaugh luz verde semáforo A")
 
 $$VA=\bar{Q0}\bar{Q1}\bar{Q2}\bar{Q3}$$
@@ -127,6 +138,8 @@ $$AA=Q0+\bar{Q1}\bar{Q2}Q3$$
 $$RA=Q1+Q2$$
 
 ![Circuito de salida semáforo A](IMAGENES_PF/SA.JPG "Circuito de salida semáforo A")
+
+#### Semáforo B
 
 ![Karnaugh luz verde semáforo B](IMAGENES_PF/KVB.JPG "Karnaugh luz verde semáforo B")
 
@@ -142,6 +155,8 @@ $$RB=Q0+\bar{Q2}\bar{Q3}+Q1Q2\bar{Q3}+Q1\bar{Q2}$$
 
 ![Circuito de salida semáforo B](IMAGENES_PF/SB.JPG "Circuito de salida semáforo B")
 
+#### Semáforo C
+
 ![Karnaugh luz verde semáforo C](IMAGENES_PF/KVC.JPG "Karnaugh luz verde semáforo C")
 
 $$VC=Q1\bar{Q2}\bar{Q3}$$
@@ -155,6 +170,8 @@ $$AC=Q1 \bar{Q2} Q3+Q0 \bar{Q2} Q3+\bar{Q1} Q2Q3$$
 $$RC=Q2\bar{Q3}+Q1Q2+\bar{Q0}+\bar{Q1}+\bar{Q2}+Q0\bar{Q1}\bar{Q3}$$
 
 ![Circuito de salida semáforo C](IMAGENES_PF/SC.JPG "Circuito de salida semáforo C")
+
+#### Semáforo D
 
 ![Karnaugh luz verde semáforo D](IMAGENES_PF/KVD.JPG "Karnaugh luz verde semáforo D")
 
@@ -255,6 +272,12 @@ module divFreq #(
 endmodule
 ```
 
+### Circuito final 
+
+Finalmente el circuito con todos los bloques integrados queda de de la siguiente manera
+
+![Semáforo inteligente](IMAGENES_PF/SI.JPG "Semáforo inteligente")
+
 ## Sintesis FPGA
 
 Luego de crear el circuito en el programa Digital, se exporta a lenguaje Verilog utilizando la opción disponible en este programa. A continuación, se añaden los divisores de frecuencia correspondientes y, finalmente, se implementa el código previamente mostrado para convertir el número binario a BCD, ya que esta conversión no fue posible realizarla en el programa Digital. El circuito sintonizado en la FPGA es:
@@ -285,6 +308,7 @@ Otra complicación surgió en la implementación y codificación de los displays
 ## Referencias
 
 [1]“Laboratorios fundamentos circuitos digitales: práctica #5,” Laboratorios Fundamentos Circuitos Digitales. https://blogfundamentoscircuitosdigitales.blogspot.com/p/practica-5.html
+[2] David Harris & Sarah Harris, Digital design and computer architecture, Morgan Kauffman, 2004
 
 
 
