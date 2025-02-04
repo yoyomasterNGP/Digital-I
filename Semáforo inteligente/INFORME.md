@@ -2,6 +2,11 @@
 
 ## Introducción
 
+En muchas ciudades del mundo, los problemas de movilidad generan pérdidas de tiempo, molestias y malestares para los usuarios. En particular, en la capital de nuestro país, la congestión vehicular en horas pico dificulta la circulación y reduce la eficiencia del transporte.
+
+Para abordar este problema, se propone la implementación de un sistema de semáforos inteligentes capaces de contabilizar, en tiempo real, la cantidad de vehículos en cada vía de una intersección. Mediante un sistema de codificación digital, estos semáforos priorizarían el paso en las calles con mayor congestión, ajustando los tiempos de espera de manera dinámica y sincronizada. Este proceso se repetiría continuamente, optimizando el flujo vehicular y reduciendo el tiempo perdido en el tráfico.
+
+
 ## Diseño
 
 Para este proyecto vamos diseñar un circuito que maneje los semáforos de una intersección de 2 calles en doble sentido en función del tráfico de cada una; teniendo un total de 4 semáforos, que llamaremos semáforo A, B, C, D.
@@ -256,6 +261,25 @@ Luego de crear el circuito en el programa Digital, se exporta a lenguaje Verilog
 
 ![Circuito Final](IMAGENES_PF/top.png "Circuito Final")
 
+## Cronograma (Avances)
+
+Tras 12 semanas de trabajo, se ha logrado cumplir con los objetivos establecidos en las primeras seis semanas. En este tiempo, se definió el comportamiento de los semáforos mediante tablas de verdad, cuyos resultados fueron traducidos a un modelo lógico y validados a través de una implementación física. Posteriormente, se integraron los pulsadores como entradas físicas del sistema, junto con la implementación de los displays BCD y los contadores para visualizar el número de vehículos en cada calle de la intersección planteada. Finalmente, se realizaron pruebas en la FPGA para verificar el comportamiento del sistema en todos los escenarios posibles. Con esto, se ha finalizado el diseño lógico del proyecto.
+
+Como variación respecto a la planificación inicial, se decidió sustituir el desarrollo de una PCB por el uso de baquelas, lo que permitirá construir una maqueta más comprensible para los espectadores ajenos al proyecto. Por lo tanto, las tareas inicialmente programadas para las semanas 7, 8, 9 y 10 serán desarrolladas en las semanas finales previas a la presentación del proyecto en el formato "DESAFÍO" propuesto por el profesor.
+
+## Dificultades
+
+### Planteamiento Lógico Inicial
+En las primeras etapas del desarrollo del proyecto, surgieron dificultades en el diseño, especialmente al definir el planteamiento del problema y establecer el comportamiento básico del sistema mediante los métodos vistos en clase. También se presentaron retos en la elaboración de diagramas clave, como la máquina de estados y los flip-flops, necesarios para comprender el funcionamiento del sistema.
+
+### Implementación Lógica en FPGA
+Uno de los principales inconvenientes fue la traducción del diseño al lenguaje de programación compatible con la FPGA. El desconocimiento del lenguaje Verilog por parte de los desarrolladores dificultó significativamente el avance del proyecto y el cumplimiento de los objetivos establecidos en el cronograma. Además, el diseño del codificador de BCD a 7 segmentos presentó complicaciones por las mismas razones, lo que requirió un mayor esfuerzo en la fase de implementación.
+
+### Clock
+Para la lógica de los displays, era necesario un clock que actualizara los datos en función de los pulsadores de aumento o disminución del número de vehículos. La dificultad principal fue la necesidad de reducir la frecuencia del clock para adaptarla a los requerimientos del sistema. Esta problemática se resolvió mediante la implementación de un divisor de frecuencia.
+
+### Displays BCD
+Otra complicación surgió en la implementación y codificación de los displays BCD. No se tuvo acceso a los modelos previstos inicialmente, lo que obligó a realizar modificaciones en el análisis y en la implementación física del sistema. Estos cambios incrementaron la complejidad del proyecto, requiriendo un mayor número de conexiones y ajustes en el diseño.
 
 ## Referencias
 
