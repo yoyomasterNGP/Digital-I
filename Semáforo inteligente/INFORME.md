@@ -259,7 +259,7 @@ endmodule
 Luego de crear el circuito en el programa Digital, se exporta a lenguaje Verilog utilizando la opción disponible en este programa. A continuación, se añaden los divisores de frecuencia correspondientes y, finalmente, se implementa el código previamente mostrado para convertir el número binario a BCD, ya que esta conversión no fue posible realizarla en el programa Digital. El circuito sintonizado en la FPGA es:
 
 
-![Circuito Final](IMAGENES_PF/top.png "Circuito Final")
+![Circuito Final](IMAGENES_PF/top.jpg "Circuito Final")
 
 ## Cronograma (Avances)
 
@@ -273,7 +273,7 @@ Como variación respecto a la planificación inicial, se decidió sustituir el d
 En las primeras etapas del desarrollo del proyecto, surgieron dificultades en el diseño, especialmente al definir el planteamiento del problema y establecer el comportamiento básico del sistema mediante los métodos vistos en clase. También se presentaron retos en la elaboración de diagramas clave, como la máquina de estados y los flip-flops, necesarios para comprender el funcionamiento del sistema.
 
 ### Implementación Lógica en FPGA
-Uno de los principales inconvenientes fue la traducción del diseño al lenguaje de programación compatible con la FPGA. El desconocimiento del lenguaje Verilog por parte de los desarrolladores dificultó significativamente el avance del proyecto y el cumplimiento de los objetivos establecidos en el cronograma. Además, el diseño del codificador de BCD a 7 segmentos presentó complicaciones por las mismas razones, lo que requirió un mayor esfuerzo en la fase de implementación.
+Uno de los principales inconvenientes fue la traducción del diseño al lenguaje de programación compatible con la FPGA. El desconocimiento del lenguaje Verilog dificultó significativamente el avance del proyecto y el cumplimiento de los objetivos establecidos en el cronograma. Además, el diseño del codificador de BCD a 7 segmentos presentó complicaciones por las mismas razones, lo que requirió un mayor esfuerzo en la fase de implementación.
 
 ### Clock
 Para la lógica de los displays, era necesario un clock que actualizara los datos en función de los pulsadores de aumento o disminución del número de vehículos. La dificultad principal fue la necesidad de reducir la frecuencia del clock para adaptarla a los requerimientos del sistema. Esta problemática se resolvió mediante la implementación de un divisor de frecuencia.
