@@ -280,7 +280,7 @@ Finalmente el circuito con todos los bloques integrados queda de de la siguiente
 
 ## Sintesis FPGA
 
-Luego de crear el circuito en el programa Digital, se exporta a lenguaje Verilog utilizando la opción disponible en este programa. A continuación, se añaden los divisores de frecuencia correspondientes y, finalmente, se implementa el código previamente mostrado para convertir el número binario a BCD, ya que esta conversión no fue posible realizarla en el programa Digital. El circuito sintonizado en la FPGA es:
+Luego de crear el circuito en el programa Digital, se exporta a lenguaje Verilog utilizando la opción disponible en este programa. A continuación, se añaden los divisores de frecuencia correspondientes y, finalmente, se implementa el código previamente mostrado para convertir el número binario a BCD, ya que esta conversión no fue posible realizarla en el programa Digital. El circuito sintonizado en la FPGA es el siguiente, donde la entrada hclk corresponde al clock de 25Mhz integrado en la FPGA:
 
 
 ![Circuito Final](IMAGENES_PF/top.jpg "Circuito Final")
