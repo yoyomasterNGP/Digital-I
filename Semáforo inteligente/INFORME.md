@@ -8,6 +8,11 @@
 - Johan Stiven Tovar López
 ___
 
+## Objetivos
+
+- Diseñar e implementar un sistema de semáforos inteligentes basado en una máquina de estados y lógica digital, capaz de contabilizar en tiempo real el flujo vehicular en una intersección y ajustar los estados de los semáforos (Rojo, Amarillo, Verde) en fución del mismo; para optimizar los tiempos de espera y mejorar el tráfico.
+- Aplicar el metódo de diagrama de bloques para la formulación, realización y ejecución del proyecto.
+
 
 ## Introducción
 
@@ -285,11 +290,13 @@ Luego de crear el circuito en el programa Digital, se exporta a lenguaje Verilog
 
 ![Circuito Final](IMAGENES_PF/top.jpg "Circuito Final")
 
-## Cronograma (Avances)
 
-Tras 12 semanas de trabajo, se ha logrado cumplir con los objetivos establecidos en las primeras seis semanas. En este tiempo, se definió el comportamiento de los semáforos mediante tablas de verdad, cuyos resultados fueron traducidos a un modelo lógico y validados a través de una implementación física. Posteriormente, se integraron los pulsadores como entradas físicas del sistema, junto con la implementación de los displays BCD y los contadores para visualizar el número de vehículos en cada calle de la intersección planteada. Finalmente, se realizaron pruebas en la FPGA para verificar el comportamiento del sistema en todos los escenarios posibles. Con esto, se ha finalizado el diseño lógico del proyecto.
 
-Como variación respecto a la planificación inicial, se decidió sustituir el desarrollo de una PCB por el uso de baquelas, lo que permitirá construir una maqueta más comprensible para los espectadores ajenos al proyecto. Por lo tanto, las tareas inicialmente programadas para las semanas 7, 8, 9 y 10 serán desarrolladas en las semanas finales previas a la presentación del proyecto en el formato "DESAFÍO" propuesto por el profesor.
+[## Cronograma (Avances)]: #
+
+[Tras 12 semanas de trabajo, se ha logrado cumplir con los objetivos establecidos en las primeras seis semanas. En este tiempo, se definió el comportamiento de los semáforos mediante tablas de verdad, cuyos resultados fueron traducidos a un modelo lógico y validados a través de una implementación física. Posteriormente, se integraron los pulsadores como entradas físicas del sistema, junto con la implementación de los displays BCD y los contadores para visualizar el número de vehículos en cada calle de la intersección planteada. Finalmente, se realizaron pruebas en la FPGA para verificar el comportamiento del sistema en todos los escenarios posibles. Con esto, se ha finalizado el diseño lógico del proyecto.]: #
+
+[Como variación respecto a la planificación inicial, se decidió sustituir el desarrollo de una PCB por el uso de baquelas, lo que permitirá construir una maqueta más comprensible para los espectadores ajenos al proyecto. Por lo tanto, las tareas inicialmente programadas para las semanas 7, 8, 9 y 10 serán desarrolladas en las semanas finales previas a la presentación del proyecto en el formato "DESAFÍO" propuesto por el profesor.]: #
 
 ## Dificultades
 
@@ -304,6 +311,20 @@ Para la lógica de los displays, era necesario un clock que actualizara los dato
 
 ### Displays BCD
 Otra complicación surgió en la implementación y codificación de los displays BCD. No se tuvo acceso a los modelos previstos inicialmente, lo que obligó a realizar modificaciones en el análisis y en la implementación física del sistema. Estos cambios incrementaron la complejidad del proyecto, requiriendo un mayor número de conexiones y ajustes en el diseño.
+
+## Conclusiones
+
+- La división de las funciones del proyecto (diagrama de bloques) agilizó la simulación y construcción del proyecto, junto a una certera verificación de su correcto funcionamiento.
+- Es necesario un estudio previo sobre el tráfico de la zona en donde se quiera implementar el proyecto, ya que para nuestro caso, el número de vehículos que se pueden contar se ve limitado por el número de bits que utiliza el crcuito; por lo que se debe ajustar el número de bits que se quieran usar para tener suficientes como para contar todo el tráfico sin tener un gran excedente.
+- El número de pines útiles para entradas y salidas de la FPGA es una limitante que se debe considerar a la hora de plantear los proyectos.
+- La multiplexación de los BCD es una herramienta útil para minimizar la cantidad de salidas de la FPGA y permitir una manipulación más cómoda de la misma.
+
+## Trabajos futuros
+
+Dentro de las potenciales optimizaciones y expansiones que puede tener el proyecto consideramos las siguientes:
+
+- **Implementación de sensores físicos:**  Nuestro proyecto el conteo del tráfico funciona mediante pulsadores, una clara mejora sería la incorporación de sensores físicos, que pueden variar desde sensores de presión en el asfalto, hasta cámaras con procesamiento de imágenes; la solución puede variar según el contexto en el que se encuentre.
+- **Expansión a múltiples intersecciones:** En cuanto a la expansión del proyecto se propone emplear el sistema en varias intersecciones y que a su vez estas estén interconectadas de alguna manera para lograr una mejor optimización del tráfico.
 
 ## Referencias
 
