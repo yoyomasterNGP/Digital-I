@@ -10,7 +10,7 @@ ___
 
 ## Objetivos
 
-- Diseñar e implementar un sistema de semáforos inteligentes basado en una máquina de estados y lógica digital, capaz de contabilizar en tiempo real el flujo vehicular en una intersección y ajustar los estados de los semáforos (Rojo, Amarillo, Verde) en fución del mismo; para optimizar los tiempos de espera y mejorar el tráfico.
+- Diseñar e implementar un sistema de semáforos inteligentes basado en una máquina de estados y lógica digital, capaz de contabilizar en tiempo real el flujo vehicular en una intersección y ajustar los estados de los semáforos (Rojo, Amarillo, Verde) en función del mismo; para optimizar los tiempos de espera y mejorar el tráfico.
 - Aplicar el metódo de diagrama de bloques para la formulación, realización y ejecución del proyecto.
 
 
