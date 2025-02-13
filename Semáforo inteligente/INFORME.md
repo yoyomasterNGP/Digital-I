@@ -35,7 +35,7 @@ Las entradas constarán de un par de sensores que medirán tanto el tráfico que
 
 ### Diagrama de bloques
 
-El proyecto lo definimos en distintas etapas. Primeramente, las señales de entrada deberán pasar por un contador que sume los carros que entran a la calle y reste los carros que salgan de la misma. Después, necesitamos saber cúal es la calle con más tráfico, por lo que la señal de los contadores pasará por un comparador que determine cúal es la calle con más tráfico. Una vez definido el estado actual del tráfico, una máquina de estados decide cúal es el estado siguiente siguiente que los semáforos deben tomar. Finalmente, según las salidas de la máquina de estados, cada semáforo tiene su propia lógica que establece que luz se debe prender.
+El proyecto lo definimos en distintas etapas. Primeramente, las señales de entrada deberán pasar por un contador que sume los carros que entran a la calle y reste los carros que salgan de la misma. Después, necesitamos saber cúal es la calle con más tráfico, por lo que la señal de los contadores pasará por un comparador que determine cúal es la calle con más tráfico. Una vez definido el estado actual del tráfico, una máquina de estados decide cúal es el estado siguiente que los semáforos deben tomar. Finalmente, según las salidas de la máquina de estados, cada semáforo tiene su propia lógica que establece que luz se debe prender.
 
 ![Diagrama de bloques](IMAGENES_PF/DB.png "Diagrama de bloques")
 
@@ -50,14 +50,14 @@ La entrada y salida del tráfico la simulamos con 2 pulsadores, "+" y "-" respec
 
 ![Comparador](IMAGENES_PF/COM.JPG "Comparador")
 
-El comparador tiene 4 entradas de 6 bits, que corresponde al tráfico de cada semáforo y son NA, NB, NC, ND; y 4 salidas de 1 bit TA, TB, TC y TD que representarán cuál es el semáforo con mayor tráfico. Para definir el número mayor se emparejan los números en NA - NB, y NC - ND y se comparan, los dos números mayores pasan a un nuevo comparador y con esto ya sabemos cúal es el número mayor. Además de esto, hay una serie de compuertas lógicas y multiplexores que defininen las salidas. Una aclaración con este circuito es ¿qué pasaría si dos o más semáforos tienen el mismo tráfico?, en este caso se escogió de manera arbitraria la siguiente jerarquía:
+El comparador tiene 4 entradas de 6 bits, que corresponde al tráfico de cada semáforo y son NA, NB, NC, ND; y 4 salidas de 1 bit TA, TB, TC y TD que representarán cuál es el semáforo con mayor tráfico. Para definir el número mayor se emparejan los números en NA - NB, y NC - ND y se comparan, los dos números mayores pasan a un nuevo comparador y con esto ya sabemos cúal es el número mayor. Además de esto, hay una serie de compuertas lógicas y multiplexores que definen las salidas. Una aclaración con este circuito es ¿qué pasaría si dos o más semáforos tienen el mismo tráfico?, en este caso se escogió de manera arbitraria la siguiente jerarquía:
 
 1. Tráfico A
 2. Tráfico B
 3. Tráfico C
 4. Tráfico D
 
-Lo que quiere decir que el semáforo A tiene mayor prioridad y el semáforo D el de menor prioridad.
+Lo que quiere decir que el semáforo A tiene mayor prioridad y el semáforo D el de menor prioridad en caso de tener dos o más calles con el mismo tráfico.
 
 ### Máquina de estados 
 La máquina de estados tendrá 4 de entradas de 1 bit que son TA, TB, TC y TD que representan el estado presente, a partir de esto definimos los distintos estados que puede tomar la máquina.
@@ -236,12 +236,42 @@ module div (
     end
 endmodule
 ```
-Luego de obtener dicho número, se procede a transformarlo para su visualización en un display de 7 segmentos. Para ello, es necesario obtener las ecuaciones del circuito e implementarlas en el programa digital. Debido a la amplia utilización de este tipo de displays, dichas ecuaciones pueden encontrarse en diversas fuentes. En este caso, se implementarán según la referencia número [1]. Por último, en este apartado, se implementó un multiplexor para cambiar rápidamente los leds encendidos y apagados en el 7s', de forma que no se distinga para el ojo humano.
+Luego de obtener dicho número, se procede a transformarlo para su visualización en un display de 7 segmentos. Para ello, es necesario obtener las ecuaciones del circuito e implementarlas en el programa digital. Debido a la amplia utilización de este tipo de displays, dichas ecuaciones pueden encontrarse en diversas fuentes. En este caso, se implementarán según la referencia número [1].
 
 
 ![Circuito 7 Segmentos](IMAGENES_PF/7segmen.png "Circuito 7 Segmentos")
 
-![Circuito 7's Multiplexor](IMAGENES_PF/multiplexor.png "Circuito 7's Multiplexor")
+### Multiplexor
+
+La idea de multiplexar los 7 segmentos es que todos los diplay reciban la misma entrada pero solo el display de la entrada correspondiente se prenda, para ello los enable de cada display deben ir variando rápidamente al mismo tiempo que el número en la entrada va variando. Para cambiar el estado de los enable se utiliza una máquina de estados sin entradas que varía de un estado a otro en bucle, en este caso tenemos 8 enable´s por lo que usamos 3 Flip-Flop y codificamos con tres dígitos.
+
+![Diagrama de transició de estados multiplexor](IMAGENES_PF/DTS_M.png "Diagrama de transició de estados multiplexor")
+
+![Tabla de transición de estados multiplexor](IMAGENES_PF/TTS_M.JPG "Tabla de transición de estados multiplexor")
+
+Utilizando Flip-Flop tipo D podemos usar directamente la tabla de Karnaugh para hallar las ecuaciones del estado futuro
+
+![](IMAGENES_PF/KX2.JPG "")
+
+$$X'_2=\bar{X_0}X_2+X_2\bar{X_1}+X_0\bar{X_2}X_1$$
+
+![](IMAGENES_PF/KX1.JPG "")
+
+$$X'_1=X_0\bar{X_1}+\bar{X_0}X_1=X_1\oplus X_0$$
+
+![](IMAGENES_PF/KX0.JPG "")
+
+$$X'_0=\bar{X_0}$$
+
+Finalmente para las salidas utilizamos el producto de sumas (PoS) basándonos en la siguiente tabla
+
+![Tabla de salidas multiplexor](IMAGENES_PF/TS_M.JPG "Tabla de salidas multiplexor")
+
+Obteniendo el siguiente circuito
+
+![Circuito multiplexor 7's](IMAGENES_PF/multiplexor.png "Circuito multiplexor 7's")
+
+Notamos que las salidas están negadas, esto se debe a que el circuito se diseño para un display cátodo común pero al final se usó un display ánodo común.
 
 ### Divisores de frecuencia
 
