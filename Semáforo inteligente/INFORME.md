@@ -10,8 +10,9 @@ ___
 
 ## Objetivos
 
-- Diseñar e implementar un sistema de semáforos inteligentes basado en una máquina de estados y lógica digital, capaz de contabilizar en tiempo real el flujo vehicular en una intersección y ajustar los estados de los semáforos (Rojo, Amarillo, Verde) en función del mismo; para optimizar los tiempos de espera y mejorar el tráfico.
-- Aplicar el metódo de diagrama de bloques para la formulación, realización y ejecución del proyecto.
+-  Diseñar e implementar un sistema de semáforos inteligentes basado en una máquina de estados y lógica digital, capaz de contabilizar en tiempo real el flujo vehicular en una intersección y ajustar los estados de los semáforos (rojo, amarillo, verde) en función de este, con el fin de optimizar los tiempos de espera y mejorar el tráfico.
+-  En ese orden de ideas, se desea implementar la metodología de diseño Top-Down para la formulación, realización y ejecución del proyecto, ya que es fundamental para ejemplificar las etapas comunes de diseño en la mayoría de los ámbitos digitales.
+-  Por último, se quiere, a su vez, plasmar rigurosamente la lógica usada en el entorno de simulación Digital, para entender correctamente cada una de las etapas propuestas.
 
 
 ## Introducción
