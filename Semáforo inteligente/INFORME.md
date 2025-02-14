@@ -343,12 +343,15 @@ Para la lógica de los displays, era necesario un clock que actualizara los dato
 ### Displays BCD
 Otra complicación surgió en la implementación y codificación de los displays BCD. No se tuvo acceso a los modelos previstos inicialmente, lo que obligó a realizar modificaciones en el análisis y en la implementación física del sistema. Estos cambios incrementaron la complejidad del proyecto, requiriendo un mayor número de conexiones y ajustes en el diseño.
 
+### Pulsadores con Antirebote
+
+En etapas avanzadas de prueba del proyecto surgió una problemática. Los pulsadores eran demasiado sensibles y generaban multitud de pulsos, lo cual no se quería en este caso. Así que se indagó en la solución de este problema y se decidió incorporar un mecanismo denominado antirrebote. Esto se podía realizar físicamente en el circuito con un condensador, pero decidimos explorar la opción con software, la cual incorpora el módulo antirrebote al código Verilog.
+
 ## Conclusiones
 
-- La división de las funciones del proyecto (diagrama de bloques) agilizó la simulación y construcción del proyecto, junto a una certera verificación de su correcto funcionamiento.
+- La división de las funciones del proyecto (diagrama de bloques) y la metodología Top-Down agilizó la simulación y construcción del proyecto, junto a una certera verificación de su correcto funcionamiento.
 - Es necesario un estudio previo sobre el tráfico de la zona en donde se quiera implementar el proyecto, ya que para nuestro caso, el número de vehículos que se pueden contar se ve limitado por el número de bits que utiliza el crcuito; por lo que se debe ajustar el número de bits que se quieran usar para tener suficientes como para contar todo el tráfico sin tener un gran excedente.
-- El número de pines útiles para entradas y salidas de la FPGA es una limitante que se debe considerar a la hora de plantear los proyectos.
-- La multiplexación de los BCD es una herramienta útil para minimizar la cantidad de salidas de la FPGA y permitir una manipulación más cómoda de la misma.
+- En resumen, se han podido cumplir los objetivos planteados en un inicio a pesar de todas las dificultades. La FPGA ha demostrado ser de gran utilidad en el manejo y control de lógica combinacional y secuencial, ya que con esta se ha podido plantear una posible solución a un problema real, mostrando así el gran aporte que puede dar la electrónica digital en situaciones prácticas.
 
 ## Trabajos futuros
 
