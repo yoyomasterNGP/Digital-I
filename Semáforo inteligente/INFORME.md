@@ -455,8 +455,8 @@ Luego de crear el circuito en el programa Digital, se exporta a lenguaje Verilog
    - 1521 celdas están en uso de un total de 7680, lo que representa un 19% de uso.
 
 #### 2. ICESTORM RAM
-   - **0 / 32 (0%)**  
-   - Indica la cantidad de bloques de memoria RAM en uso. La FPGA tiene 32 bloques disponibles, pero en esta síntesis no estás usando ninguno.
+   - **8 / 32 (25%)**  
+   - Indica la cantidad de bloques de memoria RAM en uso. La FPGA tiene 32 bloques disponibles, en este caso se utiliza un 25%.
 
 #### 3. SB IO (Special Function Block I/O)
    - **40 / 256 (15%)**  
