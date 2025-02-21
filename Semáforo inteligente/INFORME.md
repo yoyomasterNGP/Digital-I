@@ -314,6 +314,127 @@ Finalmente el circuito con todos los bloques integrados queda de de la siguiente
 
 ![Semáforo inteligente](IMAGENES_PF/SI.JPG "Semáforo inteligente")
 
+### Pantalla LCD
+
+En etapas avanzadas del proyecto, se decidió reemplazar los BCD de 7 segmentos por una pantalla LCD 1602A 16x2 sin I²C. Esta transición no presentó demasiadas dificultades, ya que el número de carros en cada intersección ya se había descompuesto en unidades y decenas. Por lo tanto, el único elemento faltante era convertirlo a código ASCII.
+
+Posteriormente, se muestra el texto "SmfA:__", lo que indica la cantidad de carros en el semáforo A. A su vez, fue necesario implementar otro divisor de frecuencia para la máquina de estados correspondiente, debido a la necesidad de enviar diversos comandos a la pantalla en cada momento, como pasar a la segunda fila, limpiar la pantalla, encender la pantalla, etc.
+
+Finalmente, el módulo implementado es el siguiente:
+
+```verilog
+module LCD(
+    input clk,
+    output reg rs,
+    output reg en,
+    output reg rw,
+    output reg [7:0] dat,
+    input [3:0] AD, //4 Bits decenas de A
+    input [3:0] AU, //4 Bits Unidades de A
+    input [3:0] BD, //4 Bits decenas de B
+    input [3:0] BU, //4 Bits Unidades de B
+    input [3:0] CD, //4 Bits decenas de C
+    input [3:0] CU, //4 Bits Unidades de C
+    input [3:0] DD, //4 Bits decenas de D
+    input [3:0] DU //4 Bits Unidades de D
+);
+
+    reg [15:0] counter;
+    reg [5:0] current, next;
+    reg clkR;
+
+    // Registros para almacenar los valores ASCII
+    reg [7:0] A1_ascii, A0_ascii, B1_ascii, B0_ascii, C1_ascii, C0_ascii, D1_ascii, D0_ascii;
+
+    // Función para convertir binario a ASCII
+    function [7:0] bin_to_ascii;
+        input [3:0] bin;
+        begin
+            if (bin <= 4'b1001) // 0-9
+                bin_to_ascii = 8'h30 + bin;
+            else // A-F
+                bin_to_ascii = 8'h41 + (bin - 4'b1010);
+        end
+    endfunction
+
+    initial begin
+        dat = 0;
+        rs = 0;
+        counter = 0;
+        current = 0;
+        next = 0;
+        clkR = 0;
+    end
+
+    always @(posedge clk) begin
+        counter = counter + 1;
+        if (counter == 16'hFFFF) clkR = ~clkR;
+    end
+
+    always @(posedge clkR) begin
+        // Convertir los valores binarios a ASCII
+        A1_ascii = bin_to_ascii({3'b000, AD});
+        A0_ascii = bin_to_ascii({3'b000, AU});
+        B1_ascii = bin_to_ascii({3'b000, BD});
+        B0_ascii = bin_to_ascii({3'b000, BU});
+        C1_ascii = bin_to_ascii({3'b000, CD});
+        C0_ascii = bin_to_ascii({3'b000, CU});
+        D1_ascii = bin_to_ascii({3'b000, DD});
+        D0_ascii = bin_to_ascii({3'b000, DU});
+
+        current = next;
+        case (current)
+            0:  begin rs <= 0; dat <= 8'h38; next <= 1; end // Config 8bit
+            1:  begin rs <= 0; dat <= 8'h38; next <= 2; end 
+            2:  begin rs <= 0; dat <= 8'h0E; next <= 4; end 
+            3:  begin rs <= 0; dat <= 8'h01; next <= 4; end 
+            
+            // Fila 1
+            4:  begin rs <= 0; dat <= 8'h80; next <= 5; end
+            5:  begin rs <= 1; dat <= 8'h53; next <= 6; end // S
+            6:  begin rs <= 1; dat <= 8'h6D; next <= 7; end // m
+            7:  begin rs <= 1; dat <= 8'h66; next <= 8; end // f
+            8:  begin rs <= 1; dat <= 8'h41; next <= 9; end // A
+            9:  begin rs <= 1; dat <= 8'h3A; next <= 10; end // :
+            10: begin rs <= 1; dat <= A1_ascii; next <= 11; end // A1 en hexadecimal
+            11: begin rs <= 1; dat <= A0_ascii; next <= 12; end // A0 en hexadecimal
+            12: begin rs <= 1; dat <= 8'h20; next <= 13; end // Espacio
+            13: begin rs <= 1; dat <= 8'h53; next <= 14; end // S
+            14: begin rs <= 1; dat <= 8'h6D; next <= 15; end // m
+            15: begin rs <= 1; dat <= 8'h66; next <= 16; end // f
+            16: begin rs <= 1; dat <= 8'h42; next <= 17; end // B
+            17: begin rs <= 1; dat <= 8'h3A; next <= 18; end // :
+            18: begin rs <= 1; dat <= B1_ascii; next <= 19; end // B1 en hexadecimal
+            19: begin rs <= 1; dat <= B0_ascii; next <= 20; end // B0 en hexadecimal
+            
+            // Fila 2
+            20: begin rs <= 0; dat <= 8'hC0; next <= 21; end
+            21: begin rs <= 1; dat <= 8'h53; next <= 22; end // S
+            22: begin rs <= 1; dat <= 8'h6D; next <= 23; end // m
+            23: begin rs <= 1; dat <= 8'h66; next <= 24; end // f
+            24: begin rs <= 1; dat <= 8'h43; next <= 25; end // C
+            25: begin rs <= 1; dat <= 8'h3A; next <= 26; end // :
+            26: begin rs <= 1; dat <= C1_ascii; next <= 27; end // C1 en hexadecimal
+            27: begin rs <= 1; dat <= C0_ascii; next <= 28; end // C0 en hexadecimal
+            28: begin rs <= 1; dat <= 8'h20; next <= 29; end // Espacio
+            29: begin rs <= 1; dat <= 8'h53; next <= 30; end // S
+            30: begin rs <= 1; dat <= 8'h6D; next <= 31; end // m
+            31: begin rs <= 1; dat <= 8'h66; next <= 32; end // f
+            32: begin rs <= 1; dat <= 8'h44; next <= 33; end // D
+            33: begin rs <= 1; dat <= 8'h3A; next <= 34; end // :
+            34: begin rs <= 1; dat <= D1_ascii; next <= 35; end // D1 en hexadecimal
+            35: begin rs <= 1; dat <= D0_ascii; next <= 0; end // D0 en hexadecimal
+            default: next = 0;
+        endcase
+    end
+
+    assign en = clkR;
+    assign rw = 0;
+endmodule
+```
+
+
+
 ## Sintesis FPGA
 
 Luego de crear el circuito en el programa Digital, se exporta a lenguaje Verilog utilizando la opción disponible en este programa. A continuación, se añaden los divisores de frecuencia correspondientes y, finalmente, se implementa el código previamente mostrado para convertir el número binario a BCD, ya que esta conversión no fue posible realizarla en el programa Digital. El circuito sintonizado en la FPGA es el siguiente, donde la entrada hclk corresponde al clock de 25Mhz integrado en la FPGA:
@@ -321,7 +442,9 @@ Luego de crear el circuito en el programa Digital, se exporta a lenguaje Verilog
 
 ![Circuito Final](IMAGENES_PF/top.jpg "Circuito Final")
 
+![Circuito Final](IMAGENES_PF/top.jpg "Circuito Final")
 
+# Recursos utilizados
 
 [## Cronograma (Avances)]: #
 
@@ -339,9 +462,6 @@ Uno de los principales inconvenientes fue la traducción del diseño al lenguaje
 
 ### Clock
 Para la lógica de los displays, era necesario un clock que actualizara los datos en función de los pulsadores de aumento o disminución del número de vehículos. La dificultad principal fue la necesidad de reducir la frecuencia del clock para adaptarla a los requerimientos del sistema. Esta problemática se resolvió mediante la implementación de un divisor de frecuencia.
-
-### Displays BCD
-Otra complicación surgió en la implementación y codificación de los displays BCD. No se tuvo acceso a los modelos previstos inicialmente, lo que obligó a realizar modificaciones en el análisis y en la implementación física del sistema. Estos cambios incrementaron la complejidad del proyecto, requiriendo un mayor número de conexiones y ajustes en el diseño.
 
 ### Pulsadores con Antirebote
 
