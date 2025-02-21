@@ -439,12 +439,21 @@ endmodule
 
 Luego de crear el circuito en el programa Digital, se exporta a lenguaje Verilog utilizando la opción disponible en este programa. A continuación, se añaden los divisores de frecuencia correspondientes y, finalmente, se implementa el código previamente mostrado para convertir el número binario a BCD, ya que esta conversión no fue posible realizarla en el programa Digital. El circuito sintonizado en la FPGA es el siguiente, donde la entrada hclk corresponde al clock de 25Mhz integrado en la FPGA:
 
+![Circuito Final Parte 1](IMAGENES_PF/LógicaSemaforos.png "Circuito FP1")
 
-![Circuito Final](IMAGENES_PF/top.jpg "Circuito Final")
 
-![Circuito Final](IMAGENES_PF/top.jpg "Circuito Final")
+![Circuito Final Parte 2](IMAGENES_PF/LogicaLCD.png "Circuito FP2")
 
 # Recursos utilizados
+
+
+
+
+
+
+
+
+
 
 [## Cronograma (Avances)]: #
 
