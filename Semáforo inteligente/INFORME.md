@@ -8,12 +8,10 @@
 - Johan Stiven Tovar López
 ___
 
-## Objetivos
+## Objetivo
 
--  Diseñar e implementar un sistema de semáforos inteligentes basado en una máquina de estados y lógica digital, capaz de contabilizar en tiempo real el flujo vehicular en una intersección y ajustar los estados de los semáforos (rojo, amarillo, verde) en función de este, con el fin de optimizar los tiempos de espera y mejorar el tráfico.
--  En ese orden de ideas, se desea implementar la metodología de diseño Top-Down para la formulación, realización y ejecución del proyecto, ya que es fundamental para ejemplificar las etapas comunes de diseño en la mayoría de los ámbitos digitales.
--  Por último, se quiere, a su vez, plasmar rigurosamente la lógica usada en el entorno de simulación Digital, para entender correctamente cada una de las etapas propuestas.
-
+- Diseñar e implementar un sistema de semáforos inteligentes que sea funcional para intersecciones donde el flujo vehicular sea similar en cada calle, como, por ejemplo, la intersección que comprende la Avenida Las Américas y la Carrera 37.
+- Se busca que el diseño considere la cantidad de flujo vehicular y, de esta forma, mejore los tiempos de espera generales en este tipo de intersecciones. Además, se busca que el diseño siga un análisis Top-Down.
 
 ## Introducción
 
