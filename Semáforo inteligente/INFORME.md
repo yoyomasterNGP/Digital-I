@@ -479,7 +479,7 @@ Luego de crear el circuito en el programa Digital, se exporta a lenguaje Verilog
    - En este caso, no se está usando.
 
 
- Cronograma (Avances)
+ ### Cronograma (Avances)
 Tras 12 semanas de trabajo, se ha logrado cumplir con los objetivos establecidos en las primeras seis semanas. En este tiempo, se definió el comportamiento de los semáforos mediante tablas de verdad, cuyos resultados fueron traducidos a un modelo lógico y validados a través de una implementación física. Posteriormente, se integraron los pulsadores como entradas físicas del sistema, junto con la implementación de los displays BCD y los contadores para visualizar el número de vehículos en cada calle de la intersección planteada. Finalmente, se realizaron pruebas en la FPGA para verificar el comportamiento del sistema en todos los escenarios posibles. Con esto, se ha finalizado el diseño lógico del proyecto.
 
 Como variación respecto a la planificación inicial, se decidió sustituir el desarrollo de una PCB por el uso de baquelas, lo que permitirá construir una maqueta más comprensible para los espectadores ajenos al proyecto. Por lo tanto, las tareas inicialmente programadas para las semanas 7, 8, 9 y 10 serán desarrolladas en las semanas finales previas a la presentación del proyecto en el formato "DESAFÍO" propuesto por el profesor.
