@@ -444,11 +444,39 @@ Luego de crear el circuito en el programa Digital, se exporta a lenguaje Verilog
 
 ![Circuito Final Parte 2](IMAGENES_PF/LogicaLCD.png "Circuito FP2")
 
-# Recursos utilizados
+## Recursos utilizados
 
 ![Recursos Utilizados](IMAGENES_PF/Recursos.png "Recursos Utilizados")
 
 
+#### 1. ICESTORM LC (Logic Cells)
+   - **1521 / 7680 (19%)**  
+   - Indica el número de celdas lógicas (Logic Cells, LC) utilizadas sobre el total disponible en la FPGA (iCE40 HX4K en este caso).  
+   - 1521 celdas están en uso de un total de 7680, lo que representa un 19% de uso.
+
+#### 2. ICESTORM RAM
+   - **0 / 32 (0%)**  
+   - Indica la cantidad de bloques de memoria RAM en uso. La FPGA tiene 32 bloques disponibles, pero en esta síntesis no estás usando ninguno.
+
+#### 3. SB IO (Special Function Block I/O)
+   - **40 / 256 (15%)**  
+   - Muestra la cantidad de pines de entrada/salida (I/O) usados sobre el total disponible.  
+   - En este caso, 40 pines están en uso de un total de 256.
+
+#### 4. SB GB (Special Function Block Global Buffers)
+   - **8 / 8 (100%)**  
+   - Representa los buffers globales disponibles y en uso. Estos se utilizan para distribuir señales de reloj u otras señales críticas en toda la FPGA.  
+   - Aquí se están utilizando todos los buffers globales disponibles (100%).
+
+#### 5. ICESTORM PLL (Phase-Locked Loop)
+   - **0 / 2 (0%)**  
+   - Indica cuántos de los PLL (circuitos de bloqueo de fase) están en uso.  
+   - En este caso, no estás utilizando ninguno de los dos PLL disponibles.
+
+#### 6. SB WARMBOOT
+   - **0 / 1 (0%)**  
+   - Indica si se está utilizando el módulo de "Warm Boot", que permite reiniciar la FPGA desde otra configuración sin apagarla.  
+   - En este caso, no se está usando.
 
 
 
