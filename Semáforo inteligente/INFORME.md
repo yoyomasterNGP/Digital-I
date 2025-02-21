@@ -446,7 +446,7 @@ Luego de crear el circuito en el programa Digital, se exporta a lenguaje Verilog
 
 # Recursos utilizados
 
-
+![Recursos Utilizados](IMAGENES_PF/Recursos.png "Recursos Utilizados")
 
 
 
